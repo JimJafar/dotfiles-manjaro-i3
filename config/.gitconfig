@@ -1,0 +1,9 @@
+[credential]
+	helper = store
+[user]
+	email = jim@sangwine.net
+	name = Jim Sangwine
+[merge]
+  tool = meld
+[diff]
+  tool = meld

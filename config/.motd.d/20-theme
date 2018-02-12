@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+themes=(`ls $HOME/.motd.d/themes/`)
+
+zsh "$HOME/.motd.d/themes/${themes[$(($RANDOM % ${#themes[@]} + 1))]}"

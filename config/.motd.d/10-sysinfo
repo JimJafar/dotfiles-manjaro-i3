@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+cat << EOF
+ CPU:   `cat /proc/cpuinfo | grep 'model name' | head -1 | cut -d':' -f2`
+ Memory: `free -m | head -n 2 | tail -n 1 | awk {'print $2'}`M `printf "\t"` Free: `free -m | head -n 2 | tail -n 1 | awk {'print $4'}`M
+ Swap:   `free -m | tail -n 1 | awk {'print $2'}`M `printf "\t\t"` Free: `free -m | tail -n 1 | awk {'print $4'}`M
+ Disk:   `df -h / | awk '{ a = $2 } END { print a }'` `printf "\t\t"` Free: `df -h / | awk '{ a = $2 } END { print a }'`
+
+EOF
