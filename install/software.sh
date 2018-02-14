@@ -1,22 +1,34 @@
 #!/usr/bin/env bash
 
+# powerline fonts
+sudo pacman -S --noconfirm powerline-fonts
+
 # zsh
-sudo pacman -S zsh
+sudo pacman -S --noconfirm zsh
 
 # Oh My Zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 # terminator
-sudo pacman -S terminator
+sudo pacman -S --noconfirm terminator
+
+# Google chrome
+yaourt -S --noconfirm google-chrome
+
+# Firefox
+sudo pacman -S --noconfirm firefox
 
 # atom
-sudo pacman -S atom
+sudo pacman -S --noconfirm atom
+
+# IntelliJ IDEA
+yaourt -S --noconfirm intellij-idea-ultimate-edition
 
 # Skype
-yaourt -S skypeforlinux-stable-bin
+yaourt -S --noconfirm skypeforlinux-stable-bin
 
 # meld
-sudo pacman -S meld
+sudo pacman -S --noconfirm meld
 
 # nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
@@ -30,15 +42,15 @@ git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/theme
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 
 # FontAwesome
-sudo pacman -S ttf-font-awesome
+sudo pacman -S --noconfirm ttf-font-awesome
 
 # paper fonts
-sudo pacman -S paper-icon-theme
+sudo pacman -S --noconfirm paper-icon-theme
 
 # i3
-sudo pacman -S i3blocks
-sudo pacman -S compton
-sudo pacman -S rofi
-sudo pacman -S feh
-sudo pacman -S arandr
-sudo pacman -S lxappearance
+sudo pacman -S --noconfirm i3blocks
+sudo pacman -S --noconfirm compton
+sudo pacman -S --noconfirm rofi
+sudo pacman -S --noconfirm feh
+sudo pacman -S --noconfirm arandr
+sudo pacman -S --noconfirm lxappearance

@@ -54,25 +54,28 @@
 [plugins]
 [profiles]
   [[default]]
+    background_color = "#002b36"
     background_darkness = 1.0
     background_type = transparent
     cursor_color = "#aaaaaa"
+    foreground_color = "#839496"
     scrollback_infinite = True
-    use_theme_colors = True
   [[mxbe]]
+    background_color = "#002b36"
     background_darkness = 1.0
     background_type = transparent
     cursor_color = "#aaaaaa"
     custom_command = env INIT_CMD="cd ~/code/maritimexchange-backend; npm start" zsh
+    foreground_color = "#839496"
     scrollback_infinite = True
     use_custom_command = True
-    use_theme_colors = True
   [[mxfe]]
+    background_color = "#002b36"
     background_darkness = 1.0
     background_type = transparent
     cursor_color = "#aaaaaa"
     custom_command = env INIT_CMD="cd ~/code/maritimexchange; npm start" zsh
     exit_action = hold
+    foreground_color = "#839496"
     scrollback_infinite = True
     use_custom_command = True
-    use_theme_colors = True

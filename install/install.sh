@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+echo "install software"
+sh ~/dotfiles-manjaro-i3/install/software.sh
+
 echo "git config"
 
 if [ -f ~/.gitconfig ]; then
@@ -61,10 +64,10 @@ fi
 
 # gtk
 
-if [ -f ~/.gtkrc-2.0 ]; then
-  mv ~/.gtkrc-2.0 ~/.gtkrc-2.0.pre-dotfiles-bak
+if [ -f ~/.gtkrc-2.0.mine ]; then
+  mv ~/.gtkrc-2.0.mine ~/.gtkrc-2.0.mine.pre-dotfiles-bak
 fi
-ln -fs ~/dotfiles-manjaro-i3/config/.gtkrc-2.0 ~/.gtkrc-2.0
+ln -fs ~/dotfiles-manjaro-i3/config/.gtkrc-2.0.mine ~/.gtkrc-2.0.mine
 
 if [ -f ~/.config/gtk-3.0/settings.ini ]; then
   mv ~/.config/gtk-3.0/settings.ini ~/.config/gtk-3.0/settings.ini.pre-dotfiles-bak

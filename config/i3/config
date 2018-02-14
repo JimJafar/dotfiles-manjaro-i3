@@ -6,8 +6,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-# font from: https://github.com/supermarin/YosemiteSanFranciscoFont
-font pango: System San Francisco Display, FontAwesome 10
+font pango: Noto Sans, Awesome 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -75,7 +74,7 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_recency#
 # start rofi
-bindsym $mod+d exec "rofi -combi-modi drun,run -show combi -modi combi -lines 3 -eh 2 -width 100 -padding 800 -bw 0 -color-window '$opaque-bg-color' '$bg-color' '$text-color' -font 'System San Francisco Display 18'"
+bindsym $mod+d exec "rofi -combi-modi drun,run -show combi -modi combi -lines 3 -eh 2 -width 100 -padding 800 -bw 0 -color-window '$opaque-bg-color' '$bg-color' '$text-color' -font 'Noto Sans 18'"
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -269,6 +268,7 @@ for_window [class="Gpick"] floating enable
 
 # default workspaces
 assign [class="Google-chrome"] $workspace1
+assign [class="Firefox"] $workspace1
 assign [class="Skype"] $workspace8
 assign [class="Mailspring"] $workspace9
 assign [class="Spotify"] $workspace10
