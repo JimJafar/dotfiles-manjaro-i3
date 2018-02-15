@@ -74,7 +74,7 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_recency#
 # start rofi
-bindsym $mod+d exec "rofi -combi-modi drun,run -show combi -modi combi -lines 3 -eh 2 -width 80 -padding 800 -bw 0 -font 'Noto Sans 18'"
+bindsym $mod+d exec "rofi -combi-modi window,drun,run -show combi -modi combi -lines 3 -eh 2 -width 80 -padding 800 -bw 0 -font 'Noto Sans 18'"
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
