@@ -43,6 +43,20 @@ if [ -f ~/.config/terminator/config ]; then
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/.terminator ~/.config/terminator/config
 
+echo "rofi"
+
+if [ ! -d ~/.config/rofi ]; then
+  mkdir ~/.config/rofi
+fi
+if [ -d ~/.config/rofi/themes ]; then
+  mv ~/.config/rofi/themes ~/.config/rofi/themes.pre-dotfiles-bak
+fi
+if [ -f ~/.config/rofi/config ]; then
+  mv ~/.config/rofi/config ~/.config/rofi/config.pre-dotfiles-bak
+fi
+ln -fs ~/dotfiles-manjaro-i3/config/rofi/config ~/.config/rofi/config
+ln -fs ~/dotfiles-manjaro-i3/config/rofi/themes ~/.config/rofi/themes
+
 echo "i3"
 
 if [ ! -d ~/.i3 ]; then
@@ -51,12 +65,17 @@ fi
 if [ -f ~/.i3/config ]; then
   mv ~/.i3/config ~/.i3/config.pre-dotfiles-bak
 fi
-ln -fs ~/dotfiles-manjaro-i3/config/i3/config ~/.i3
+ln -fs ~/dotfiles-manjaro-i3/config/i3/config ~/.i3/config
 
 if [ -f ~/.config/i3/i3blocks.conf ]; then
   mv ~/.config/i3/i3blocks.conf ~/.config/i3/i3blocks.conf.pre-dotfiles-bak
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/i3/i3blocks.conf ~/.config/i3
+
+if [ -f ~/.i3status.conf ]; then
+  mv ~/.i3status.conf ~/.i3status.conf.pre-dotfiles-bak
+fi
+ln -fs ~/dotfiles-manjaro-i3/config/i3/i3status.conf ~/.i3status.conf
 
 if [ ! -f ~/lock-i3.sh ]; then
   ln -fs ~/dotfiles-manjaro-i3/scripts/lock-i3.sh ~/lock-i3.sh

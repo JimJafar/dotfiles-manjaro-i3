@@ -20,14 +20,14 @@ font pango: Noto Sans, Awesome 10
 # font, it doesn’t scale on retina/hidpi displays.
 
 # colours - taken from Pop Theme
-set $bg-color            #3B3633
-set $opaque-bg-color     argb:D849423E
-set $inactive-bg-color   #574F4A
-set $text-color          #BABABA
-set $inactive-text-color #9E9E9E
-set $urgent-bg-color     #FAA41A
-set $urgent-text-color   #3B3633
-set $highlight-color     #48B9C7
+set $bg-color            #0A323D
+set $opaque-bg-color     argb:D8103C48
+set $inactive-bg-color   #0A323D
+set $text-color          #8E9C9D
+set $inactive-text-color #687D86
+set $urgent-bg-color     #32A19A
+set $urgent-text-color   #0A323D
+set $highlight-color     #32A19A
 
 # Manjaro colours
 # Theme colors
@@ -74,7 +74,7 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_recency#
 # start rofi
-bindsym $mod+d exec "rofi -combi-modi drun,run -show combi -modi combi -lines 3 -eh 2 -width 100 -padding 800 -bw 0 -color-window '$opaque-bg-color' '$bg-color' '$text-color' -font 'Noto Sans 18'"
+bindsym $mod+d exec "rofi -combi-modi drun,run -show combi -modi combi -lines 3 -eh 2 -width 80 -padding 800 -bw 0 -font 'Noto Sans 18'"
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -189,16 +189,16 @@ bindsym $mod+minus scratchpad show
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $workspace1 "1 "
-set $workspace2 "2 "
-set $workspace3 "3 "
-set $workspace4 "4 "
-set $workspace5 "5 "
-set $workspace6 "6 "
-set $workspace7 "7 "
-set $workspace8 "8 "
-set $workspace9 "9 "
-set $workspace10 "10 "
+set $workspace1 1:
+set $workspace2 2:
+set $workspace3 3:
+set $workspace4 4:
+set $workspace5 5:
+set $workspace6 6:
+set $workspace7 7:
+set $workspace8 8:
+set $workspace9 9:
+set $workspace10 10:
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $workspace1
@@ -272,7 +272,8 @@ assign [class="Firefox"] $workspace1
 assign [class="Skype"] $workspace8
 assign [class="Mailspring"] $workspace9
 assign [class="Spotify"] $workspace10
-for_window [class="Spotify"] move to workspace $workspace10 # Spotify doesn't play nice
+# Spotify doesn't play nice
+for_window [class="Spotify"] move to workspace $workspace10
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -354,13 +355,14 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $urgent-text-colo
 #		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $urgent-text-color
 #	}
 #}
+
 bar {
 	i3bar_command i3bar
 	status_command i3status
 	position top
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
+tray_output primary
 #	tray_output eDP1
 
 	bindsym button4 nop
@@ -368,18 +370,18 @@ bar {
 	font xft:Noto Sans 10.5
 	strip_workspace_numbers yes
 
-    colors {
-        background #283339
-        statusline #F9FAF9
-        separator  #454947
+  colors {
+      background #283339
+      statusline #F9FAF9
+      separator  #454947
 
-#                      border  backgr. text
-        focused_workspace  #F9FAF9 #16a085 #292F34
-        active_workspace   #595B5B #353836 #FDF6E3
-        inactive_workspace #595B5B #283339 #EEE8D5
-        binding_mode       #16a085 #2C2C2C #F9FAF9
-        urgent_workspace   #16a085 #FDF6E3 #E5201D
-    }
+#                        border  backgr. text
+      focused_workspace  #F9FAF9 #16a085 #292F34
+      active_workspace   #595B5B #353836 #FDF6E3
+      inactive_workspace #595B5B #283339 #EEE8D5
+      binding_mode       #16a085 #2C2C2C #F9FAF9
+      urgent_workspace   #16a085 #FDF6E3 #E5201D
+  }
 }
 
 # hide/unhide i3status bar
@@ -389,8 +391,8 @@ bindsym $mod+m bar mode toggle
 exec --no-startup-id compton -f
 
 # Set bg
-exec_always --no-startup-id DISPLAY=:0.0 feh --bg-scale Dropbox/images/Wallpaper/1080p/pixel_art/62902060-pixel-art-wallpapers.png
-exec_always --no-startup-id DISPLAY=:0.1 feh --bg-scale Dropbox/images/Wallpaper/1080p/pixel_art/62902060-pixel-art-wallpapers.png
+#exec_always --no-startup-id DISPLAY=:0.0 feh --bg-scale Dropbox/images/Wallpaper/1080p/pixel_art/62902060-pixel-art-wallpapers.png
+#exec_always --no-startup-id DISPLAY=:0.1 feh --bg-scale Dropbox/images/Wallpaper/1080p/pixel_art/62902060-pixel-art-wallpapers.png
 
 # Set natural scrolling
 exec_always --no-startup-id sh /home/jim/dotfiles-manjaro-i3/scripts/natural-scrolling.sh
@@ -430,54 +432,56 @@ exec --no-startup-id "ruby /home/jim/dotfiles-manjaro-i3/scripts/i3-floating-tit
 #############################
 
 # Set inner/outer gaps
-gaps inner 10
-gaps outer -4
+# gaps inner 10
+# gaps outer -4
+gaps inner 0
+gaps outer 0
 
-# Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
-# gaps inner|outer current|all set|plus|minus <px>
-# gaps inner all set 10
-# gaps outer all plus 5
-
-# Smart gaps (gaps used if only more than one container on the workspace)
-smart_gaps on
-
-# Smart borders (draw borders around container only if it is not the only container on this workspace)
-# on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-smart_borders on
-
-# Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
-set $mode_gaps Gaps: (o) outer, (i) inner
-set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
-set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-bindsym $mod+Shift+g mode "$mode_gaps"
-
-mode "$mode_gaps" {
-        bindsym o      mode "$mode_gaps_outer"
-        bindsym i      mode "$mode_gaps_inner"
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-mode "$mode_gaps_inner" {
-        bindsym plus  gaps inner current plus 5
-        bindsym minus gaps inner current minus 5
-        bindsym 0     gaps inner current set 0
-
-        bindsym Shift+plus  gaps inner all plus 5
-        bindsym Shift+minus gaps inner all minus 5
-        bindsym Shift+0     gaps inner all set 0
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-mode "$mode_gaps_outer" {
-        bindsym plus  gaps outer current plus 5
-        bindsym minus gaps outer current minus 5
-        bindsym 0     gaps outer current set 0
-
-        bindsym Shift+plus  gaps outer all plus 5
-        bindsym Shift+minus gaps outer all minus 5
-        bindsym Shift+0     gaps outer all set 0
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
+## Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
+## gaps inner|outer current|all set|plus|minus <px>
+## gaps inner all set 10
+## gaps outer all plus 5
+#
+## Smart gaps (gaps used if only more than one container on the workspace)
+#smart_gaps on
+#
+## Smart borders (draw borders around container only if it is not the only container on this workspace)
+## on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
+#smart_borders on
+#
+## Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
+#set $mode_gaps Gaps: (o) outer, (i) inner
+#set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+#set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+#bindsym $mod+Shift+g mode "$mode_gaps"
+#
+#mode "$mode_gaps" {
+#        bindsym o      mode "$mode_gaps_outer"
+#        bindsym i      mode "$mode_gaps_inner"
+#        bindsym Return mode "default"
+#        bindsym Escape mode "default"
+#}
+#mode "$mode_gaps_inner" {
+#        bindsym plus  gaps inner current plus 5
+#        bindsym minus gaps inner current minus 5
+#        bindsym 0     gaps inner current set 0
+#
+#        bindsym Shift+plus  gaps inner all plus 5
+#        bindsym Shift+minus gaps inner all minus 5
+#        bindsym Shift+0     gaps inner all set 0
+#
+#        bindsym Return mode "default"
+#        bindsym Escape mode "default"
+#}
+#mode "$mode_gaps_outer" {
+#        bindsym plus  gaps outer current plus 5
+#        bindsym minus gaps outer current minus 5
+#        bindsym 0     gaps outer current set 0
+#
+#        bindsym Shift+plus  gaps outer all plus 5
+#        bindsym Shift+minus gaps outer all minus 5
+#        bindsym Shift+0     gaps outer all set 0
+#
+#        bindsym Return mode "default"
+#        bindsym Escape mode "default"
+#}

@@ -5,11 +5,13 @@
   title_inactive_fg_color = "#574f4a"
   title_receive_bg_color = "#48b9c7"
   title_receive_fg_color = "#3b3633"
-  title_transmit_bg_color = "#faa41a"
+  title_transmit_bg_color = "#32a19a"
   title_transmit_fg_color = "#3b3633"
   window_state = maximise
 [keybindings]
   reset_clear = <Primary><Shift>k
+  split_horiz = <Primary>d
+  split_vert = <Primary><Shift>d
 [layouts]
   [[default]]
     [[[child1]]]

@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+# pulseaudio
+sh install_pulseaudio
+
+# Thunar
+sudo pacman -S --noconfirm thunar
+
 # powerline fonts
 sudo pacman -S --noconfirm powerline-fonts
 
@@ -18,17 +24,32 @@ yaourt -S --noconfirm google-chrome
 # Firefox
 sudo pacman -S --noconfirm firefox
 
+# mailspring
+yaourt -S --noconfirm mailspring
+
+# Franz
+yaourt -S --noconfirm franz
+
 # atom
 sudo pacman -S --noconfirm atom
 
 # IntelliJ IDEA
 yaourt -S --noconfirm intellij-idea-ultimate-edition
 
+# Spotify
+yaourt -S --noconfirm spotify
+
+# Dropbox
+yaourt -S --noconfirm dropbox
+
 # Skype
 yaourt -S --noconfirm skypeforlinux-stable-bin
 
 # meld
 sudo pacman -S --noconfirm meld
+
+# Gpick color picker
+sudo pacman -S --noconfirm gpick
 
 # nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
