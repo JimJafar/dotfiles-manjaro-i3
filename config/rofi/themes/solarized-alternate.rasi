@@ -46,7 +46,7 @@
 #message {
     border:       1px dash 0px 0px ;
     border-color: @separatorcolor;
-    padding:      1px ;
+    padding:      1px;
 }
 #textbox {
     text-color: @foreground;
@@ -114,9 +114,9 @@
     text-color:       @selected-normal-foreground;
 }
 #inputbar {
-    spacing:    0;
+    spacing:    20px;
     text-color: @normal-foreground;
-    padding:    1px ;
+    padding:    1px;
 }
 #case-indicator {
     spacing:    0;
