@@ -85,15 +85,15 @@ bindsym $mod+z exec --no-startup-id morc_menu
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # key-bindings
-bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +5%; notify-send ''"
-bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -5%; notify-send ''"
-bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle; notify-send ''"
+bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +5%"
+bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle"
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
-bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send ''"
-bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send ''"
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 10"
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 10"
 #bindsym $mod+e exec nautilus
 bindsym Print exec screenshot
 
@@ -426,6 +426,7 @@ exec --no-startup-id spotify
 exec --no-startup-id google-chrome
 exec --no-startup-id mailspring
 exec --no-startup-id dropbox
+exec_always --no-startup-id "sh /home/jim/dotfiles-manjaro-i3/scripts/trackpad-setup.sh"
 
 # Fix floating window titles
 exec --no-startup-id "ruby /home/jim/dotfiles-manjaro-i3/scripts/i3-floating-titles.rb"

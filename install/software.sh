@@ -66,7 +66,9 @@ git clone https://github.com/denysdovhan/spaceship-prompt.git ~/.oh-my-zsh/custo
 ln -s ~/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme
 
 # FontAwesome
-sudo pacman -S --noconfirm ttf-font-awesome
+# sudo pacman -S --noconfirm ttf-font-awesome
+# Use fontawesome 4 so spaces around fonts don't render as glyphs
+yaourt -S --noconfirm otf-font-awesome-4
 
 # paper fonts
 sudo pacman -S --noconfirm paper-icon-theme
