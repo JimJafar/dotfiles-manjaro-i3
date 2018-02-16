@@ -121,6 +121,9 @@ if [ -f ~/.config/mimeapps.list ]; then
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/mimeapps.list ~/.config/mimeapps.list
 
+echo "pavucontrol"
+sudo pacman -S --noconfirm pavucontrol
+
 echo "postgres"
 sudo pacman -S --noconfirm postgresql
 

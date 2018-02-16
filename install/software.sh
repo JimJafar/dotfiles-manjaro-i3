@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # pulseaudio
-sh install_pulseaudio
+install_pulseaudio
 
 # Thunar
 sudo pacman -S --noconfirm thunar
