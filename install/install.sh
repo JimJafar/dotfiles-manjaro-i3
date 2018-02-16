@@ -121,6 +121,9 @@ if [ -f ~/.config/mimeapps.list ]; then
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/mimeapps.list ~/.config/mimeapps.list
 
+echo "postgres"
+sudo pacman -S --noconfirm postgresql
+
 echo "changing default shell to zsh"
 sudo chsh -s /usr/bin/zsh
 sudo chsh -s /usr/bin/zsh jim
@@ -128,4 +131,16 @@ sudo chsh -s /usr/bin/zsh jim
 echo "setting up trackpad"
 sh ~/dotfiles-manjaro-i3/scripts/trackpad-setup.sh
 
+echo "removing palemoon"
+sudo pacman -Rs palemoon-bin
+
 echo "DONE"
+
+echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+echo "To finish postgres setup:"
+echo "sudo -u postgres -i"
+echo "initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data'"
+echo "exit"
+echo "systemctl start postgresql.service"
+echo "systemctl enable postgresql.service"
+echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
