@@ -81,7 +81,7 @@ if [ ! -f ~/lock-i3.sh ]; then
   ln -fs ~/dotfiles-manjaro-i3/scripts/lock-i3.sh ~/lock-i3.sh
 fi
 
-# gtk
+echo "gtk"
 
 if [ -f ~/.gtkrc-2.0.mine ]; then
   mv ~/.gtkrc-2.0.mine ~/.gtkrc-2.0.mine.pre-dotfiles-bak
@@ -93,26 +93,33 @@ if [ -f ~/.config/gtk-3.0/settings.ini ]; then
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/gtk-3.0/settings.ini ~/.config/gtk-3.0/
 
-# screen layouts
+echo "screen layouts"
 
 if [ -d ~/.screenlayout ]; then
   mv ~/.screenlayout ~/.screenlayout.pre-dotfiles-bak
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/screenlayout ~/.screenlayout
 
-# compton
+echo "compton"
 
 if [ -f ~/.compton.conf ]; then
   mv ~/.compton.conf ~/.compton.conf.pre-dotfiles-bak
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/.compton.conf ~/.compton.conf
 
-# X settings
+echo "X settings"
 
 if [ -f ~/.Xresources ]; then
   mv ~/.Xresources ~/.Xresources.pre-dotfiles-bak
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/.Xresources ~/.Xresources
+
+echo "MIME apps"
+
+if [ -f ~/.config/mimeapps.list ]; then
+  mv ~/.config/mimeapps.list ~/.config/mimeapps.list-pre-dotfiles-bak
+fi
+ln -fs ~/dotfiles-manjaro-i3/config/mimeapps.list ~/.config/mimeapps.list
 
 echo "changing default shell to zsh"
 sudo chsh -s /usr/bin/zsh

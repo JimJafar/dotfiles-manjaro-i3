@@ -12,6 +12,9 @@ sudo pacman -S --noconfirm powerline-fonts
 # zsh
 sudo pacman -S --noconfirm zsh
 
+# postgres
+sudo pacman -S --noconfirm postgresql
+
 # Oh My Zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
