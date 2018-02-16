@@ -416,7 +416,10 @@ exec --no-startup-id clipit
 # exec_always --no-startup-id sbxkb
 exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker blurlock
+# lock after 5 minutes
+exec --no-startup-id xautolock -time 5 -locker blurlock
+# switch screen off after 6 minutes
+exec --no-startup-id xset dpms 360
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec --no-startup-id spotify
