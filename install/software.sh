@@ -80,3 +80,4 @@ sudo pacman -S --noconfirm rofi
 sudo pacman -S --noconfirm feh
 sudo pacman -S --noconfirm arandr
 sudo pacman -S --noconfirm lxappearance
+sudo pacman -S --noconfirm xorg-xbacklight
