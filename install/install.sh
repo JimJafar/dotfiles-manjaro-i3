@@ -124,6 +124,9 @@ ln -fs ~/dotfiles-manjaro-i3/config/mimeapps.list ~/.config/mimeapps.list
 echo "pavucontrol"
 sudo pacman -S --noconfirm pavucontrol
 
+echo "playerctl"
+sudo pacman -S --noconfirm playerctl
+
 echo "postgres"
 sudo pacman -S --noconfirm postgresql
 
