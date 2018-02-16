@@ -391,8 +391,8 @@ bindsym $mod+m bar mode toggle
 exec --no-startup-id compton -f
 
 # Set bg
-#exec_always --no-startup-id DISPLAY=:0.0 feh --bg-scale Dropbox/images/Wallpaper/1080p/pixel_art/62902060-pixel-art-wallpapers.png
-#exec_always --no-startup-id DISPLAY=:0.1 feh --bg-scale Dropbox/images/Wallpaper/1080p/pixel_art/62902060-pixel-art-wallpapers.png
+exec_always --no-startup-id DISPLAY=:0.0 feh --bg-scale Dropbox/images/Wallpaper/1080p/pixel_art/62902060-pixel-art-wallpapers.png
+exec_always --no-startup-id DISPLAY=:0.1 feh --bg-scale Dropbox/images/Wallpaper/1080p/pixel_art/62902060-pixel-art-wallpapers.png
 
 # Set natural scrolling
 exec_always --no-startup-id sh /home/jim/dotfiles-manjaro-i3/scripts/natural-scrolling.sh
