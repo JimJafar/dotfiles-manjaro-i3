@@ -125,4 +125,7 @@ echo "changing default shell to zsh"
 sudo chsh -s /usr/bin/zsh
 sudo chsh -s /usr/bin/zsh jim
 
+echo "setting up trackpad"
+sh ~/dotfiles-manjaro-i3/scripts/trackpad-setup.sh
+
 echo "DONE"
