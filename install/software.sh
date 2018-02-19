@@ -73,6 +73,9 @@ yaourt -S --noconfirm otf-font-awesome-4
 # paper fonts
 sudo pacman -S --noconfirm paper-icon-theme
 
+# shutter
+yaourt -S --noconfirm shutter
+
 # i3
 sudo pacman -S --noconfirm i3blocks
 sudo pacman -S --noconfirm compton
