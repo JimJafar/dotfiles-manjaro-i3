@@ -265,6 +265,7 @@ for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 for_window [class="Gpick"] floating enable
+for_window [class="Shutter"] floating enable
 
 # default workspaces
 assign [class="Google-chrome"] $workspace1
@@ -392,7 +393,6 @@ exec --no-startup-id compton -f
 
 # Set bg
 exec_always --no-startup-id DISPLAY=:0.0 feh --bg-scale Dropbox/images/Wallpaper/1080p/pixel_art/62902060-pixel-art-wallpapers.png
-exec_always --no-startup-id DISPLAY=:0.1 feh --bg-scale Dropbox/images/Wallpaper/1080p/pixel_art/62902060-pixel-art-wallpapers.png
 
 # Set natural scrolling
 exec_always --no-startup-id sh /home/jim/dotfiles-manjaro-i3/scripts/natural-scrolling.sh
@@ -416,10 +416,10 @@ exec --no-startup-id clipit
 # exec_always --no-startup-id sbxkb
 exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
-# lock after 5 minutes
-exec --no-startup-id xautolock -time 5 -locker blurlock
-# switch screen off after 6 minutes
-exec --no-startup-id xset dpms 360
+# lock after 3 minutes
+exec --no-startup-id xautolock -time 3 -locker blurlock
+# switch screen off after 4 minutes
+exec --no-startup-id xset dpms 240
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec --no-startup-id spotify
