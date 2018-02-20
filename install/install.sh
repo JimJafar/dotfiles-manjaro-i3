@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-echo "install software"
 sh ~/dotfiles-manjaro-i3/install/software.sh
+
+echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+echo "- STARTING CONFIG SETUP                                       -"
+echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
 
 echo "git config"
 
@@ -107,6 +110,13 @@ if [ -f ~/.compton.conf ]; then
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/.compton.conf ~/.compton.conf
 
+echo ".xinitrc"
+
+if [ -f ~/.xinitrc ]; then
+  mv ~/.xinitrc ~/.xinitrc.pre-dotfiles-bak
+fi
+ln -fs ~/dotfiles-manjaro-i3/config/.xinitrc ~/.xinitrc
+
 echo "X settings"
 
 if [ -f ~/.Xresources ]; then
@@ -121,14 +131,12 @@ if [ -f ~/.config/mimeapps.list ]; then
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/mimeapps.list ~/.config/mimeapps.list
 
-echo "pavucontrol"
-sudo pacman -S --noconfirm pavucontrol
+echo "/etc/default/grub"
 
-echo "playerctl"
-sudo pacman -S --noconfirm playerctl
-
-echo "postgres"
-sudo pacman -S --noconfirm postgresql
+if [ -f /etc/default/grub ]; then
+  sudo mv /etc/default/grub /etc/default/grub.pre-dotfiles-bak
+fi
+sudo ln -fs ~/dotfiles-manjaro-i3/config/etc/default/grub /etc/default/grub
 
 echo "changing default shell to zsh"
 sudo chsh -s /usr/bin/zsh
@@ -137,16 +145,6 @@ sudo chsh -s /usr/bin/zsh jim
 echo "setting up trackpad"
 sh ~/dotfiles-manjaro-i3/scripts/trackpad-setup.sh
 
-echo "removing palemoon"
-sudo pacman -Rs palemoon-bin
-
-echo "DONE"
-
 echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
-echo "To finish postgres setup:"
-echo "sudo -u postgres -i"
-echo "initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data'"
-echo "exit"
-echo "systemctl start postgresql.service"
-echo "systemctl enable postgresql.service"
+echo "- FINISHED CONFIG SETUP                                       -"
 echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"

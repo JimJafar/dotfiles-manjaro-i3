@@ -1,82 +1,86 @@
 #!/usr/bin/env bash
 
-# pulseaudio
+echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+echo "- STARTING SOFTWARE INSTALLATION                              -"
+echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+
+echo "pulseaudio"
 install_pulseaudio
 
-# Thunar
+echo "Thunar"
 sudo pacman -S --noconfirm thunar
 
-# powerline fonts
+echo "powerline fonts"
 sudo pacman -S --noconfirm powerline-fonts
 
-# zsh
+echo "zsh"
 sudo pacman -S --noconfirm zsh
 
-# postgres
+echo "postgres"
 sudo pacman -S --noconfirm postgresql
 
-# Oh My Zsh
+echo "Oh My Zsh"
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
-# terminator
+echo "terminator"
 sudo pacman -S --noconfirm terminator
 
-# Google chrome
+echo "Google chrome"
 yaourt -S --noconfirm google-chrome
 
-# Firefox
+echo "Firefox"
 sudo pacman -S --noconfirm firefox
 
-# mailspring
+echo "mailspring"
 yaourt -S --noconfirm mailspring
 
-# Franz
+echo "Franz"
 yaourt -S --noconfirm franz
 
-# atom
+echo "atom"
 sudo pacman -S --noconfirm atom
 
-# IntelliJ IDEA
+echo "IntelliJ IDEA"
 yaourt -S --noconfirm intellij-idea-ultimate-edition
 
-# Spotify
+echo "Spotify"
 yaourt -S --noconfirm spotify
 
-# Dropbox
+echo "Dropbox"
 yaourt -S --noconfirm dropbox
 
-# Skype
+echo "Skype"
 yaourt -S --noconfirm skypeforlinux-stable-bin
 
-# meld
+echo "meld"
 sudo pacman -S --noconfirm meld
 
-# Gpick color picker
+echo "Gpick color picker"
 sudo pacman -S --noconfirm gpick
 
-# nvm
+echo "nvm"
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 
-# Enable Ledger Nano S: http://support.ledgerwallet.com/knowledge_base/topics/ledger-wallet-is-not-recognized-on-linux
+echo "Enable Ledger Nano S: http://support.ledgerwallet.com/knowledge_base/topics/ledger-wallet-is-not-recognized-on-linux"
 wget -q -O - https://www.ledgerwallet.com/support/add_udev_rules.sh | sudo bash
 
-# zsh stuff
+echo "zsh stuff"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 git clone https://github.com/denysdovhan/spaceship-prompt.git ~/.oh-my-zsh/custom/themes/spaceship-prompt
 ln -s ~/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme
 
-# FontAwesome
+echo "FontAwesome"
 # sudo pacman -S --noconfirm ttf-font-awesome
-# Use fontawesome 4 so spaces around fonts don't render as glyphs
+echo "Use fontawesome 4 so spaces around fonts don't render as glyphs"
 yaourt -S --noconfirm otf-font-awesome-4
 
-# paper fonts
+echo "paper fonts"
 sudo pacman -S --noconfirm paper-icon-theme
 
-# shutter
+echo "shutter"
 yaourt -S --noconfirm shutter
 
-# i3
+echo "i3 stuff"
 sudo pacman -S --noconfirm i3blocks
 sudo pacman -S --noconfirm compton
 sudo pacman -S --noconfirm rofi
@@ -84,3 +88,26 @@ sudo pacman -S --noconfirm feh
 sudo pacman -S --noconfirm arandr
 sudo pacman -S --noconfirm lxappearance
 sudo pacman -S --noconfirm xorg-xbacklight
+
+echo "pavucontrol"
+sudo pacman -S --noconfirm pavucontrol
+
+echo "playerctl"
+sudo pacman -S --noconfirm playerctl
+
+echo "postgres"
+sudo pacman -S --noconfirm postgresql
+
+echo "removing palemoon"
+sudo pacman -Rs palemoon-bin
+
+echo "To complete postgres setup:"
+echo "sudo -u postgres -i"
+echo "initdb --locale \$LANG -E UTF8 -D '/var/lib/postgres/data'"
+echo "exit"
+echo "systemctl start postgresql.service"
+echo "systemctl enable postgresql.service"
+
+echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+echo "- FINISHED SOFTWARE INSTALLATION                              -"
+echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
