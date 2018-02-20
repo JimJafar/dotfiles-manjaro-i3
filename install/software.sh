@@ -84,7 +84,6 @@ echo "i3 stuff"
 sudo pacman -S --noconfirm i3blocks
 sudo pacman -S --noconfirm compton
 sudo pacman -S --noconfirm rofi
-sudo pacman -S --noconfirm feh
 sudo pacman -S --noconfirm arandr
 sudo pacman -S --noconfirm lxappearance
 sudo pacman -S --noconfirm xorg-xbacklight
