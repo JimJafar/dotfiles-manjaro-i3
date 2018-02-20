@@ -110,8 +110,8 @@ alias screenDual1080="sh ~/.screenlayout/dual-1080.sh"
 alias naturalScrolling="sh ~/dotfiles-manjaro-i3/scripts/natural-scrolling.sh"
 alias vpnMXup="nmcli con up jim-mx-vpn"
 alias vpnMXdown="nmcli con down jim-mx-vpn"
-alias vpnSanup="nmcli con up sangwinenet"
-alias vpnSandown="nmcli con down sangwinenet"
+alias vpnSup="nmcli con up sangwinenet"
+alias vpnSdown="nmcli con down sangwinenet"
 
 # BASH completion
 source /etc/bash_completion.d/climate_completion

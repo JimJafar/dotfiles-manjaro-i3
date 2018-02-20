@@ -43,6 +43,9 @@ set $highlight-color     #32A19A
 # Disable mouse follow focus
 focus_follows_mouse no
 
+# Set resolution for main display to 1920x1080 (before restoring nitrogen & running conky)
+# exec_always --no-startup-id "sh /home/jim/dotfiles-manjaro-i3/scripts/setup-displays.sh"
+
 # hide title bars
 for_window [class="^.*"] border pixel 2
 new_window pixel 2
@@ -225,16 +228,16 @@ bindsym $mod+9 workspace $workspace9
 bindsym $mod+0 workspace $workspace10
 
 # workspace default monitors
-workspace $workspace1 output HDMI-1
-workspace $workspace2 output HDMI-1
-workspace $workspace3 output HDMI-1
-workspace $workspace4 output HDMI-1
-workspace $workspace5 output HDMI-1
-workspace $workspace6 output HDMI-1
-workspace $workspace7 output eDP-1
-workspace $workspace8 output eDP-1
-workspace $workspace9 output eDP-1
-workspace $workspace10 output eDP-1
+workspace $workspace1 output HDMI1
+workspace $workspace2 output HDMI1
+workspace $workspace3 output HDMI1
+workspace $workspace4 output HDMI1
+workspace $workspace5 output HDMI1
+workspace $workspace6 output HDMI1
+workspace $workspace7 output eDP1
+workspace $workspace8 output eDP1
+workspace $workspace9 output eDP1
+workspace $workspace10 output eDP1
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -403,6 +406,7 @@ exec --no-startup-id nm-applet
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# restore wallpaper using nitrogen
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 # exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
@@ -423,6 +427,7 @@ exec --no-startup-id spotify
 exec --no-startup-id google-chrome-stable
 exec --no-startup-id mailspring
 exec --no-startup-id dropbox
+exec --no-startup-id franz
 exec_always --no-startup-id "sh /home/jim/dotfiles-manjaro-i3/scripts/trackpad-setup.sh"
 
 # Fix floating window titles

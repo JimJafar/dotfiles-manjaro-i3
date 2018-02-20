@@ -110,12 +110,12 @@ if [ -f ~/.compton.conf ]; then
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/.compton.conf ~/.compton.conf
 
-echo ".xinitrc"
+echo ".xprofile"
 
-if [ -f ~/.xinitrc ]; then
-  mv ~/.xinitrc ~/.xinitrc.pre-dotfiles-bak
+if [ -f ~/.xprofile ]; then
+  mv ~/.xprofile ~/.xprofile.pre-dotfiles-bak
 fi
-ln -fs ~/dotfiles-manjaro-i3/config/.xinitrc ~/.xinitrc
+ln -fs ~/dotfiles-manjaro-i3/config/.xprofile ~/.xprofile
 
 echo "X settings"
 

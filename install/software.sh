@@ -58,6 +58,9 @@ sudo pacman -S --noconfirm meld
 echo "Gpick color picker"
 sudo pacman -S --noconfirm gpick
 
+echo "Gnome calculator"
+yaourt -S --noconfirm gnome-calculator
+
 echo "nvm"
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 

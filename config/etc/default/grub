@@ -25,7 +25,8 @@ GRUB_TERMINAL_INPUT=console
 # note that you can use only modes which your graphic card supports via VBE
 # you can see them in real GRUB with the command `vbeinfo'
 #GRUB_GFXMODE=auto
-GRUB_GFXMODE=1920x1080
+GRUB_GFXMODE=1920x1080x32,1024x768x32,auto
+GRUB_GFXPAYLOAD_LINUX=keep
 
 # Uncomment to allow the kernel use the same resolution used by grub
 GRUB_GFXPAYLOAD_LINUX=keep
