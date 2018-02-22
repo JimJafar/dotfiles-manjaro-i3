@@ -274,7 +274,8 @@ for_window [class="Shutter"] floating enable
 assign [class="Google-chrome"] $workspace1
 assign [class="Firefox"] $workspace1
 assign [class="Skype"] $workspace8
-assign [class="Mailspring"] $workspace9
+assign [class="Geary"] $workspace9
+assign [class="Franz"] $workspace8
 assign [class="Spotify"] $workspace10
 # Spotify doesn't play nice
 for_window [class="Spotify"] move to workspace $workspace10
@@ -419,13 +420,13 @@ exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
 # lock after 3 minutes
 exec --no-startup-id xautolock -time 3 -locker blurlock
-# turn the screen off after 4 minutes
-exec --no-startup-id xset dpms 240
+# screen standby after 4 minutes (sleep to allow compton to start - it wipes the setting otherwise)
+exec --no-startup-id "sh -c 'sleep 10; exec xset dpms 240'"
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec --no-startup-id spotify
 exec --no-startup-id google-chrome-stable
-exec --no-startup-id mailspring
+exec --no-startup-id geary
 exec --no-startup-id dropbox
 exec --no-startup-id franz
 exec_always --no-startup-id "sh /home/jim/dotfiles-manjaro-i3/scripts/trackpad-setup.sh"
