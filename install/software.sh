@@ -22,6 +22,16 @@ sudo pacman -S --noconfirm postgresql
 echo "Oh My Zsh"
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
+echo "ruby"
+sudo pacman -S --noconfirm ruby
+
+echo "python & pip"
+sudo pacman -S --noconfirm python
+sudo pacman -S --noconfirm python-pip
+
+echo "i3ipc"
+gem install i3ipc
+
 echo "terminator"
 sudo pacman -S --noconfirm terminator
 
