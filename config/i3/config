@@ -405,6 +405,9 @@ bindsym $mod+Ctrl+Shift+2 exec --no-startup-id sh ~/.screenlayout/dual-1080.sh
 # start NetworkManager applet
 exec --no-startup-id nm-applet
 
+# start Bluetooth Manager applet
+exec --no-startup-id blueman-applet
+
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # restore wallpaper using nitrogen
