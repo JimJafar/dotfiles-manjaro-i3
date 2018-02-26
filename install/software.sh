@@ -113,6 +113,9 @@ sudo pacman -S --noconfirm playerctl
 echo "postgres"
 sudo pacman -S --noconfirm postgresql
 
+echo "Libre Office"
+sudo pacman -S --noconfirm libreoffice-fresh
+
 echo "removing palemoon"
 sudo pacman -Rs palemoon-bin
 
