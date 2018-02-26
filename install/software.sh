@@ -6,6 +6,7 @@ echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
 
 echo "pulseaudio"
 install_pulseaudio
+sudo pacman -S pulseaudio-bluetooth
 
 echo "Thunar"
 sudo pacman -S --noconfirm thunar
@@ -128,6 +129,12 @@ echo "initdb --locale \$LANG -E UTF8 -D '/var/lib/postgres/data'"
 echo "exit"
 echo "systemctl start postgresql.service"
 echo "systemctl enable postgresql.service"
+
+echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+
+echo "To enable Bluetooth speakers, add the following to /etc/bluetooth/audio.conf under [General]"
+echo "Enable=Source,Sink,Media,Socket"
+echo "https://wiki.archlinux.org/index.php/bluetooth#Audio"
 
 echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
 echo "- FINISHED SOFTWARE INSTALLATION                              -"
