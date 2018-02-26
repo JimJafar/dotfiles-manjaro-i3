@@ -6,7 +6,10 @@ echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
 
 echo "pulseaudio"
 install_pulseaudio
-sudo pacman -S pulseaudio-bluetooth
+
+echo "bluetooth"
+sudo pacman -S --noconfirm pulseaudio-bluetooth
+sudo pacman -S --noconfirm bluez-utils # installs bluetoothctl
 
 echo "Thunar"
 sudo pacman -S --noconfirm thunar
