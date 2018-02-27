@@ -396,7 +396,7 @@ exec_always --no-startup-id $HOME/dotfiles-manjaro-i3/scripts/polybar.sh
 bindsym $mod+m bar mode toggle
 
 # Use compton compositor
-exec --no-startup-id compton -f
+exec --no-startup-id compton -f --respect-prop-shadow
 
 # Set natural scrolling
 exec_always --no-startup-id sh $HOME/dotfiles-manjaro-i3/scripts/natural-scrolling.sh

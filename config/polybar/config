@@ -11,6 +11,7 @@
 ;background = ${xrdb:color0:#222}
 background = #222
 background-alt = #444
+background-tray = #262727
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
 foreground-alt = #555
@@ -52,7 +53,7 @@ modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan eth batte
 tray-position = right
 tray-padding = 2
 ;tray-transparent = true
-;tray-background = #0063ff
+tray-background = ${colors.background-tray}
 
 ;wm-restack = bspwm
 wm-restack = i3
