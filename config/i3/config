@@ -44,7 +44,7 @@ set $highlight-color     #32A19A
 focus_follows_mouse no
 
 # Set resolution for main display to 1920x1080 (before restoring nitrogen & running conky)
-# exec_always --no-startup-id "sh /home/jim/dotfiles-manjaro-i3/scripts/setup-displays.sh"
+# exec_always --no-startup-id "sh $HOME/dotfiles-manjaro-i3/scripts/setup-displays.sh"
 
 # hide title bars
 for_window [class="^.*"] border pixel 2
@@ -192,16 +192,16 @@ bindsym $mod+minus scratchpad show
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $workspace1 1:
-set $workspace2 2:
-set $workspace3 3:
-set $workspace4 4:
-set $workspace5 5:
-set $workspace6 6:
-set $workspace7 7:
-set $workspace8 8:
-set $workspace9 9:
-set $workspace10 10:
+set $workspace1 1
+set $workspace2 2
+set $workspace3 3
+set $workspace4 4
+set $workspace5 5
+set $workspace6 6
+set $workspace7 7
+set $workspace8 8
+set $workspace9 9
+set $workspace10 10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $workspace1
@@ -361,33 +361,36 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $urgent-text-colo
 #	}
 #}
 
-bar {
-	i3bar_command i3bar
-	status_command i3status
-	position top
+# bar {
+# 	i3bar_command i3bar
+# 	status_command i3status
+# 	position top
+#
+#   ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
+#   tray_output primary
+#   #	tray_output eDP1
+#
+# 	bindsym button4 nop
+# 	bindsym button5 nop
+# 	font xft:Noto Sans 10.5
+# 	strip_workspace_numbers yes
+#
+#   colors {
+#       background #283339
+#       statusline #F9FAF9
+#       separator  #454947
+#
+#   #                      border  backgr. text
+#       focused_workspace  #F9FAF9 #16a085 #292F34
+#       active_workspace   #595B5B #353836 #FDF6E3
+#       inactive_workspace #595B5B #283339 #EEE8D5
+#       binding_mode       #16a085 #2C2C2C #F9FAF9
+#       urgent_workspace   #16a085 #FDF6E3 #E5201D
+#   }
+# }
 
-## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-tray_output primary
-#	tray_output eDP1
-
-	bindsym button4 nop
-	bindsym button5 nop
-	font xft:Noto Sans 10.5
-	strip_workspace_numbers yes
-
-  colors {
-      background #283339
-      statusline #F9FAF9
-      separator  #454947
-
-#                        border  backgr. text
-      focused_workspace  #F9FAF9 #16a085 #292F34
-      active_workspace   #595B5B #353836 #FDF6E3
-      inactive_workspace #595B5B #283339 #EEE8D5
-      binding_mode       #16a085 #2C2C2C #F9FAF9
-      urgent_workspace   #16a085 #FDF6E3 #E5201D
-  }
-}
+# polybar
+exec_always --no-startup-id $HOME/dotfiles-manjaro-i3/scripts/polybar.sh
 
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
@@ -396,7 +399,7 @@ bindsym $mod+m bar mode toggle
 exec --no-startup-id compton -f
 
 # Set natural scrolling
-exec_always --no-startup-id sh /home/jim/dotfiles-manjaro-i3/scripts/natural-scrolling.sh
+exec_always --no-startup-id sh $HOME/dotfiles-manjaro-i3/scripts/natural-scrolling.sh
 
 # Screen layouts
 bindsym $mod+Ctrl+Shift+1 exec --no-startup-id sh ~/.screenlayout/single-1080.sh
@@ -432,10 +435,10 @@ exec --no-startup-id google-chrome-stable
 exec --no-startup-id geary
 exec --no-startup-id dropbox
 exec --no-startup-id franz
-exec_always --no-startup-id "sh /home/jim/dotfiles-manjaro-i3/scripts/trackpad-setup.sh"
+exec_always --no-startup-id "sh $HOME/dotfiles-manjaro-i3/scripts/trackpad-setup.sh"
 
 # Fix floating window titles
-exec --no-startup-id "ruby /home/jim/dotfiles-manjaro-i3/scripts/i3-floating-titles.rb"
+exec --no-startup-id "ruby $HOME/dotfiles-manjaro-i3/scripts/i3-floating-titles.rb"
 
 #############################
 ### settings for i3-gaps: ###

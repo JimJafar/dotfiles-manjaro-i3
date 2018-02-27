@@ -46,6 +46,16 @@ if [ -f ~/.config/terminator/config ]; then
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/.terminator ~/.config/terminator/config
 
+echo "polybar"
+
+if [ ! -d ~/.config/polybar ]; then
+  mkdir ~/.config/polybar
+fi
+if [ -f ~/.config/polybar/config ]; then
+  mv ~/.config/polybar/config ~/.config/polybar/config.pre-dotfiles-bak
+fi
+ln -fs ~/dotfiles-manjaro-i3/config/polybar/config ~/.config/polybar/config
+
 echo "rofi"
 
 if [ ! -d ~/.config/rofi ]; then

@@ -101,12 +101,17 @@ echo "shutter"
 yaourt -S --noconfirm shutter
 
 echo "i3 stuff"
-sudo pacman -S --noconfirm i3blocks
+# sudo pacman -S --noconfirm i3blocks
 sudo pacman -S --noconfirm compton
 sudo pacman -S --noconfirm rofi
 sudo pacman -S --noconfirm arandr
 sudo pacman -S --noconfirm lxappearance
 sudo pacman -S --noconfirm xorg-xbacklight
+
+echo "polybar"
+sudo pacman -S --noconfirm polybar
+sudo pacman -S --noconfirm libmpdclient
+yaourt -S --noconfirm i3ipc-glib-git
 
 echo "pavucontrol"
 sudo pacman -S --noconfirm pavucontrol
@@ -122,6 +127,9 @@ yaourt -S --noconfirm docker-git
 
 echo "Libre Office"
 sudo pacman -S --noconfirm libreoffice-fresh
+
+echo "WPS Office"
+yaourt -S --noconfirm wps-office
 
 echo "removing palemoon"
 sudo pacman -Rs palemoon-bin
