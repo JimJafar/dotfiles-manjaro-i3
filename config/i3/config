@@ -27,7 +27,7 @@ set $text-color          #8E9C9D
 set $inactive-text-color #687D86
 set $urgent-bg-color     #32A19A
 set $urgent-text-color   #0A323D
-set $highlight-color     #32A19A
+set $highlight-color     #2FD5D6
 
 # Manjaro colours
 # Theme colors

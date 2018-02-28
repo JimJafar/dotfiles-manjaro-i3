@@ -109,8 +109,9 @@ sudo pacman -S --noconfirm lxappearance
 sudo pacman -S --noconfirm xorg-xbacklight
 
 echo "polybar"
-sudo pacman -S --noconfirm polybar
 sudo pacman -S --noconfirm libmpdclient
+sudo pacman -S --noconfirm jsoncpp
+sudo pacman -S --noconfirm polybar
 yaourt -S --noconfirm i3ipc-glib-git
 
 echo "pavucontrol"
