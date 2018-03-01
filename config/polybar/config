@@ -16,7 +16,7 @@ background-alt = #444
 background-tray = #262727
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
-foreground-alt = #555
+foreground-alt = #666
 primary = #2FD5D6
 secondary = #32A19A
 alert = #bd2c40
@@ -115,7 +115,7 @@ label-mode-background = ${colors.primary}
 ;   %index%
 ;   %output%
 ; Default: %icon%  %name%
-label-focused = %icon%  %name%
+label-focused = %icon% %name%
 label-focused-background = ${colors.background-alt}
 label-focused-underline = ${colors.primary}
 label-focused-padding = 2
@@ -126,7 +126,7 @@ label-focused-padding = 2
 ;   %icon%
 ;   %index%
 ; Default: %icon%  %name%
-label-unfocused = %icon%  %name%
+label-unfocused = %icon% %name%
 label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
@@ -135,7 +135,7 @@ label-unfocused-padding = 2
 ;   %icon%
 ;   %index%
 ; Default: %icon%  %name%
-label-visible = %icon%  %name%
+label-visible = %icon% %name%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
@@ -146,14 +146,14 @@ label-visible-padding = ${self.label-focused-padding}
 ;   %icon%
 ;   %index%
 ; Default: %icon%  %name%
-label-urgent = %icon%  %name%
+label-urgent = %icon% %name%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
 ; Separator in between workspaces
 label-separator = |
 label-separator-padding = 2
-label-separator-foreground = #ffb52a
+label-separator-foreground = ${colors.primary}
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -506,9 +506,13 @@ expand-right = true
 format-spacing = 1
 
 label-open = 
-label-open-foreground = ${colors.secondary}
+label-open-foreground = ${colors.primary}
+label-open-underline = ${colors.primary}
+label-open-padding = 1
 label-close =  cancel
-label-close-foreground = ${colors.secondary}
+label-close-foreground = ${colors.primary}
+label-close-underline = ${colors.primary}
+label-close-padding = 1
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
 
