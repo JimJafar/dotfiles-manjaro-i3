@@ -220,7 +220,7 @@ mount-0 = /home
 ;   %free%
 ;   %used%
 ; Default: %mountpoint% %percentage_free%%
-label-mounted = %{F#32A19A}%mountpoint%%{F-}: %percentage_used%%
+label-mounted = %{F#666666}%{F-} %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
