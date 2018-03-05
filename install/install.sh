@@ -148,6 +148,16 @@ if [ -f /etc/default/grub ]; then
 fi
 sudo ln -fs ~/dotfiles-manjaro-i3/config/etc/default/grub /etc/default/grub
 
+echo "nitrogen (wallpaper)"
+
+if [ -d ~/.config/nitrogen ]; then
+  mv ~/.config/nitrogen ~/.config/nitrogen.pre-dotfiles-bak
+else
+  mkdir ~/.config/nitrogen
+fi
+ln -fs ~/dotfiles-manjaro-i3/config/nitrogen/bg-saved.cfg ~/.config/nitrogen/bg-saved.cfg
+ln -fs ~/dotfiles-manjaro-i3/config/nitrogen/nitrogen.cfg ~/.config/nitrogen/nitrogen.cfg
+
 echo "changing default shell to zsh"
 sudo chsh -s /usr/bin/zsh
 sudo chsh -s /usr/bin/zsh jim
