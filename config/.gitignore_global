@@ -1,0 +1,7 @@
+# IDEs and editors
+.idea
+*.iml
+
+# package managers
+node_modules
+bower_components

@@ -3,6 +3,8 @@
 [user]
 	email = jim@sangwine.net
 	name = Jim Sangwine
+[core]
+	excludesfile = ~/.gitignore_global
 [merge]
   tool = meld
 [diff]

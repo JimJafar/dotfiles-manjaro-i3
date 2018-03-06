@@ -13,6 +13,14 @@ if [ -f ~/.gitconfig ]; then
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/.gitconfig ~/.gitconfig
 
+
+echo "global .gitignore"
+
+if [ -f ~/.gitignore_global]; then
+  mv ~/.gitignore_global ~/.gitignore_global-pre-dotfiles-bak
+fi
+ln -fs ~/dotfiles-manjaro-i3/config/.gitignore_global ~/.gitignore_global
+
 echo "zshrc"
 
 if [ -f ~/.zshrc ]; then
