@@ -425,9 +425,7 @@ exec --no-startup-id clipit
 exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
 # lock after 3 minutes
-exec --no-startup-id xautolock -time 3 -locker blurlock
-# screen standby after 4 minutes (sleep to allow compton to start - it wipes the setting otherwise)
-exec --no-startup-id "sh -c 'sleep 30; exec xset dpms 240'"
+exec --no-startup-id xautolock -time 3 -locker ~/lock-i3.sh
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec --no-startup-id spotify
