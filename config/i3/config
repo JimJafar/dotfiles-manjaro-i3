@@ -335,8 +335,8 @@ mode "resize" {
 }
 
 # lock the machine
-# bindsym $mod+l exec "sh ~/lock-i3.sh"
-bindsym $mod+l exec --no-startup-id blurlock
+bindsym $mod+l exec --no-startup-id ~/lock-i3.sh
+# bindsym $mod+l exec --no-startup-id blurlock
 
 # window colors
 #                       border              background         text                 indicator
