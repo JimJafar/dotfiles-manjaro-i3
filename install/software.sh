@@ -132,6 +132,10 @@ sudo pacman -S --noconfirm libreoffice-fresh
 echo "WPS Office"
 yaourt -S --noconfirm wps-office
 
+echo "kdeconnect"
+sudo pacman -S --noconfirm kdeconnect
+yaourt -S --noconfirm indicator-kdeconnect-git
+
 echo "removing palemoon"
 sudo pacman -Rs palemoon-bin
 
