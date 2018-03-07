@@ -405,40 +405,43 @@ exec_always --no-startup-id sh $HOME/dotfiles-manjaro-i3/scripts/natural-scrolli
 bindsym $mod+Ctrl+Shift+1 exec --no-startup-id sh ~/.screenlayout/single-1080.sh
 bindsym $mod+Ctrl+Shift+2 exec --no-startup-id sh ~/.screenlayout/dual-1080.sh
 
-# start NetworkManager applet
-exec --no-startup-id nm-applet
+# AUTOSTART
 
-# start Bluetooth Manager applet
+# applets
+
+exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
-
-# Autostart applications
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-# restore wallpaper using nitrogen
-exec_always --no-startup-id nitrogen --restore; sleep 1; compton -b
-# exec --no-startup-id manjaro-hello
-exec --no-startup-id nm-applet
-exec --no-startup-id xfce4-power-manager
+exec --no-startup-id sleep 10; /usr/bin/kdeconnect-indicator
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
+
+# persistent daemons
+
+exec --no-startup-id xfce4-power-manager
 exec --no-startup-id /usr/lib/kdeconnectd
-exec --no-startup-id sleep 10; /usr/bin/kdeconnect-indicator
-# exec --no-startup-id blueman-applet
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id dropbox
 # exec_always --no-startup-id sbxkb
-exec --no-startup-id start_conky_maia
-# exec --no-startup-id start_conky_green
-# lock after 3 minutes
+
+# configuration
+
+exec_always --no-startup-id "sh $HOME/dotfiles-manjaro-i3/scripts/trackpad-setup.sh"
+exec --no-startup-id "ruby $HOME/dotfiles-manjaro-i3/scripts/i3-floating-titles.rb"
 exec --no-startup-id xautolock -time 3 -locker ~/lock-i3.sh
+exec --no-startup-id start_conky_maia
+exec_always --no-startup-id nitrogen --restore; sleep 1; compton -b
+
+# Manjaro stuff
+
+# exec --no-startup-id manjaro-hello
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
+
+# Applications
 exec --no-startup-id spotify
 exec --no-startup-id google-chrome-stable
 exec --no-startup-id geary
-exec --no-startup-id dropbox
 exec --no-startup-id franz
-exec_always --no-startup-id "sh $HOME/dotfiles-manjaro-i3/scripts/trackpad-setup.sh"
-
-# Fix floating window titles
-exec --no-startup-id "ruby $HOME/dotfiles-manjaro-i3/scripts/i3-floating-titles.rb"
 
 #############################
 ### settings for i3-gaps: ###
