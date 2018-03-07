@@ -420,6 +420,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
+exec --no-startup-id /usr/lib/kdeconnectd
 exec --no-startup-id sleep 10; /usr/bin/kdeconnect-indicator
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
