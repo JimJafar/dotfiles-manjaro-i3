@@ -270,6 +270,7 @@ for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 for_window [class="Gpick"] floating enable
 for_window [class="Shutter"] floating enable
+for_window [class="Epdfview"] floating enable
 
 # default workspaces
 assign [class="Google-chrome"] $workspace1
