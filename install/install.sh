@@ -83,10 +83,10 @@ echo "Thunar"
 if [ ! -d ~/.config/Thunar ]; then
   mkdir ~/.config/Thunar
 fi
-if [ -f ~/.config/Thunar/uca.xml ]; then
-  mv ~/.config/Thunar/uca.xml ~/.config/Thunar/uca.xml.pre-dotfiles-bak
+if [ -d ~/.config/Thunar ]; then
+  mv ~/.config/Thunar ~/.config/Thunar.pre-dotfiles-bak
 fi
-ln -fs ~/dotfiles-manjaro-i3/config/Thunar/uca.xml ~/.config/Thunar/uca.xml
+ln -fs ~/dotfiles-manjaro-i3/config/Thunar ~/.config/Thunar
 
 echo "i3"
 

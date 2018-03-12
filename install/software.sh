@@ -145,6 +145,10 @@ yaourt -S --noconfirm indicator-kdeconnect-git
 echo "unzip"
 sudo pacman -S --noconfirm unzip
 
+echo "mlocate and catfish for search"
+sudo pacman -S --noconfirm mlocate
+sudo pacman -S --noconfirm catfish
+
 echo "removing palemoon"
 sudo pacman -Rs palemoon-bin
 
