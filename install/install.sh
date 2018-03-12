@@ -78,6 +78,16 @@ fi
 ln -fs ~/dotfiles-manjaro-i3/config/rofi/config ~/.config/rofi/config
 ln -fs ~/dotfiles-manjaro-i3/config/rofi/themes ~/.config/rofi/themes
 
+echo "Thunar"
+
+if [ ! -d ~/.config/Thunar ]; then
+  mkdir ~/.config/Thunar
+fi
+if [ -f ~/.config/Thunar/uca.xml ]; then
+  mv ~/.config/Thunar/uca.xml ~/.config/Thunar/uca.xml.pre-dotfiles-bak
+fi
+ln -fs ~/dotfiles-manjaro-i3/config/Thunar/uca.xml ~/.config/Thunar/uca.xml
+
 echo "i3"
 
 if [ ! -d ~/.i3 ]; then

@@ -13,6 +13,12 @@ sudo pacman -S --noconfirm bluez-utils # installs bluetoothctl
 
 echo "Thunar"
 sudo pacman -S --noconfirm thunar
+sudo pacman -S --noconfirm thunar-archive-plugin
+sudo pacman -S --noconfirm thunar-media-tags-plugin
+# thumbnails
+sudo pacman -S --noconfirm tumbler
+sudo pacman -S --noconfirm ffmpegthumbnailer
+sudo pacman -S --noconfirm raw-thumbnailer
 
 echo "powerline fonts"
 sudo pacman -S --noconfirm powerline-fonts
@@ -135,6 +141,9 @@ yaourt -S --noconfirm wps-office
 echo "kdeconnect"
 sudo pacman -S --noconfirm kdeconnect
 yaourt -S --noconfirm indicator-kdeconnect-git
+
+echo "unzip"
+sudo pacman -S --noconfirm unzip
 
 echo "removing palemoon"
 sudo pacman -Rs palemoon-bin

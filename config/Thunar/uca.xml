@@ -1,0 +1,22 @@
+<?xml encoding="UTF-8" version="1.0"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<unique-id>1518774071930009-1</unique-id>
+	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<description>Example for a custom action</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>preferences-system-search</icon>
+	<name>Search</name>
+	<unique-id>1520866172791212-1</unique-id>
+	<command>catfish –path=%f</command>
+	<description>Search for files and folders</description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+</actions>
