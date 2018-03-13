@@ -183,6 +183,9 @@ sudo chsh -s /usr/bin/zsh jim
 echo "setting up trackpad"
 sh ~/dotfiles-manjaro-i3/scripts/trackpad-setup.sh
 
+echo "setting compose key to right-alt"
+setxkbmap -option compose:ralt
+
 echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
 echo "- FINISHED CONFIG SETUP                                       -"
 echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
