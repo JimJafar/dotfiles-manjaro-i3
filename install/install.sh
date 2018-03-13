@@ -86,7 +86,7 @@ fi
 if [ -d ~/.config/Thunar ]; then
   mv ~/.config/Thunar ~/.config/Thunar.pre-dotfiles-bak
 fi
-ln -fs ~/dotfiles-manjaro-i3/config/Thunar ~/.config/Thunar
+ln -fs ~/dotfiles-manjaro-i3/config/Thunar ~/.config/
 
 echo "i3"
 
