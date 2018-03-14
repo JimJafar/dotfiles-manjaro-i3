@@ -192,7 +192,8 @@ type = internal/pulseaudio
 
 ; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
 ; If not, uses default sink
-sink = alsa_output.usb-FiiO_FiiO_USB_DAC_E17K-01.analog-stereo ; alsa_output.pci-0000_12_00.3.analog-stereo
+# sink = alsa_output.usb-FiiO_FiiO_USB_DAC_E17K-01.analog-stereo ; alsa_output.pci-0000_12_00.3.analog-stereo
+sink = alsa_output.pci-0000_00_1f.3.analog-stereo
 
 ; Available tags:
 ;   <label-volume> (default)
@@ -355,17 +356,21 @@ type = internal/volume
 
 ; Soundcard to be used
 ; Usually in the format hw:#
-;master-soundcard = default
-;speaker-soundcard = default
-;headphone-soundcard = default
+; You can find the different card numbers in `/proc/asound/cards`
+; master-soundcard = default
+master-soundcard = hw:0
+speaker-soundcard = hw:0
+headphone-soundcard = hw:1
 
 ; Name of the master mixer
 ; Default: Master
-;master-mixer = Master
+; master-mixer = Master
 
 ; Optionally define speaker and headphone mixers
 ; Use the following command to list available mixer controls:
 ; $ amixer scontrols | sed -nr "s/.*'([[:alnum:]]+)'.*/\1/p"
+; Or the following where 0 is the
+; amixer -c 0 scontrols
 ; Default: none
 ; speaker-mixer = Speaker
 ; Default: none
@@ -379,7 +384,7 @@ type = internal/volume
 
 ; Use volume mapping (similar to amixer -M and alsamixer), where the increase in volume is linear to the ear
 ; Default: false
-mapped = true
+mapped = false
 
 ; Available tags:
 ;   <label-volume> (default)
