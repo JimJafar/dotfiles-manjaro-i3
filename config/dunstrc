@@ -80,7 +80,7 @@
     # for longer than idle_threshold seconds.
     # Set to 0 to disable.
     # default 120
-    idle_threshold = 120
+    idle_threshold = 30
 
     # Which monitor should the notifications be displayed on.
     monitor = 0
@@ -131,7 +131,7 @@
     #  * foreground: use the same color as the foreground;
     #  * frame: use the same color as the frame;
     #  * anything else will be interpreted as a X color.
-    separator_color = "#263238"
+    separator_color = "#2FD5D6"
 
     # Print a notification on startup.
     # This is mainly for error detection, since dbus (re-)starts dunst
@@ -155,7 +155,7 @@
 
 [frame]
     width = 1
-    color = "#788388"
+    color = "#2FD5D6"
 
 [shortcuts]
 
@@ -174,10 +174,10 @@
     # Redisplay last message(s).
     # On the US keyboard layout "grave" is normally above TAB and left
     # of "1".
-    history = ctrl+mod4+h
+    history = ctrl+mod1+h
 
     # Context menu.
-    context = ctrl+mod4+n
+    context = ctrl+mod1+n
 
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.

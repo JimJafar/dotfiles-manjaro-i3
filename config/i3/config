@@ -19,7 +19,7 @@ font pango: Noto Sans, Awesome 10
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
-# colours - taken from Pop Theme
+# colours - taken from Solarised
 set $bg-color            #0A323D
 set $opaque-bg-color     argb:D8103C48
 set $inactive-bg-color   #0A323D

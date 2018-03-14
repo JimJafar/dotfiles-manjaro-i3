@@ -95,6 +95,17 @@ if [ -f ~/.config/dunst/dunstrc ]; then
   mv ~/.config/dunst/dunstrc ~/.config/dunst/dunstrc.pre-dotfiles-bak
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/dunstrc ~/.config/dunst/dunstrc
+ln -fs ~/dotfiles-manjaro-i3/config/rofi/themes ~/.config/rofi/themes
+
+echo "Clipit"
+
+if [ ! -d ~/.config/clipit ]; then
+  mkdir ~/.config/clipit
+fi
+if [ -f ~/.config/clipit/clipitrc ]; then
+  mv ~/.config/clipit/clipitrc ~/.config/clipit/clipitrc.pre-dotfiles-bak
+fi
+ln -fs ~/dotfiles-manjaro-i3/config/clipitrc ~/.config/clipit/clipitrc
 
 echo "i3"
 
