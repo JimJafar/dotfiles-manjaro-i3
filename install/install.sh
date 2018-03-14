@@ -80,13 +80,21 @@ ln -fs ~/dotfiles-manjaro-i3/config/rofi/themes ~/.config/rofi/themes
 
 echo "Thunar"
 
-if [ ! -d ~/.config/Thunar ]; then
-  mkdir ~/.config/Thunar
-fi
 if [ -d ~/.config/Thunar ]; then
   mv ~/.config/Thunar ~/.config/Thunar.pre-dotfiles-bak
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/Thunar ~/.config/
+ln -fs ~/dotfiles-manjaro-i3/config/rofi/themes ~/.config/rofi/themes
+
+echo "Dunst (notifications)"
+
+if [ ! -d ~/.config/dunst ]; then
+  mkdir ~/.config/dunst
+fi
+if [ -f ~/.config/dunst/dunstrc ]; then
+  mv ~/.config/dunst/dunstrc ~/.config/dunst/dunstrc.pre-dotfiles-bak
+fi
+ln -fs ~/dotfiles-manjaro-i3/config/dunstrc ~/.config/dunst/dunstrc
 
 echo "i3"
 

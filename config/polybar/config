@@ -192,8 +192,8 @@ type = internal/pulseaudio
 
 ; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
 ; If not, uses default sink
-# sink = alsa_output.usb-FiiO_FiiO_USB_DAC_E17K-01.analog-stereo ; alsa_output.pci-0000_12_00.3.analog-stereo
-sink = alsa_output.pci-0000_00_1f.3.analog-stereo
+sink = alsa_output.usb-FiiO_FiiO_USB_DAC_E17K-01.analog-stereo ; alsa_output.pci-0000_12_00.3.analog-stereo
+; sink = alsa_output.pci-0000_00_1f.3.analog-stereo
 
 ; Available tags:
 ;   <label-volume> (default)
