@@ -84,7 +84,6 @@ if [ -d ~/.config/Thunar ]; then
   mv ~/.config/Thunar ~/.config/Thunar.pre-dotfiles-bak
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/Thunar ~/.config/
-ln -fs ~/dotfiles-manjaro-i3/config/rofi/themes ~/.config/rofi/themes
 
 echo "Dunst (notifications)"
 
@@ -95,7 +94,6 @@ if [ -f ~/.config/dunst/dunstrc ]; then
   mv ~/.config/dunst/dunstrc ~/.config/dunst/dunstrc.pre-dotfiles-bak
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/dunstrc ~/.config/dunst/dunstrc
-ln -fs ~/dotfiles-manjaro-i3/config/rofi/themes ~/.config/rofi/themes
 
 echo "Clipit"
 
@@ -106,6 +104,32 @@ if [ -f ~/.config/clipit/clipitrc ]; then
   mv ~/.config/clipit/clipitrc ~/.config/clipit/clipitrc.pre-dotfiles-bak
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/clipitrc ~/.config/clipit/clipitrc
+
+echo "Ranger"
+
+if [ ! -d ~/.config/ranger ]; then
+  mkdir ~/.config/ranger
+fi
+if [ ! -d ~/.config/ranger/colorschemes ]; then
+  mkdir ~/.config/ranger/colorschemes
+fi
+if [ -f ~/.config/ranger/rc.conf ]; then
+  mv ~/.config/ranger/rc.conf ~/.config/ranger/rc.conf.pre-dotfiles-bak
+fi
+fi
+if [ -f ~/.config/ranger/rifle.conf ]; then
+  mv ~/.config/ranger/rifle.conf ~/.config/ranger/rifle.conf.pre-dotfiles-bak
+fi
+fi
+if [ -f ~/.config/ranger/scope.sh ]; then
+  mv ~/.config/ranger/scope.sh ~/.config/ranger/scope.sh.pre-dotfiles-bak
+fi
+if [ ! -f ~/.config/ranger/colorschemes/darkest_space.py ]; then
+  ln -fs ~/dotfiles-manjaro-i3/config/ranger/colorschemes/darkest_space.py ~/.config/ranger/colorschemes/darkest_space.py
+fi
+ln -fs ~/dotfiles-manjaro-i3/config/ranger/rc.conf ~/.config/ranger/rc.conf
+ln -fs ~/dotfiles-manjaro-i3/config/ranger/rifle.conf ~/.config/ranger/rifle.conf
+ln -fs ~/dotfiles-manjaro-i3/config/ranger/scope.sh ~/.config/ranger/scope.sh
 
 echo "i3"
 
