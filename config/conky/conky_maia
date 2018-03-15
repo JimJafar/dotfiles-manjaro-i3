@@ -18,7 +18,7 @@ conky.config = {
 	use_xft = true,
 }
 conky.text = [[
-${voffset 8}$color2${font Bitstream Vera Sans:size=16}${time %A}$font\
+${voffset 20}$color2${font Bitstream Vera Sans:size=16}${time %A}$font\
 ${voffset -8}$alignr$color${font Bitstream Vera Sans:size=38}${time %e}$font
 $color${voffset -30}$color${font Bitstream Vera Sans:size=18}${time %b}$font\
 ${voffset -3} $color${font Bitstream Vera Sans:size=20}${time %Y}$font$color2$hr
