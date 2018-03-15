@@ -152,6 +152,10 @@ sudo pacman -S --noconfirm catfish
 echo "ranger"
 sudo pacman -S --noconfirm ranger
 
+echo "i3lock-color"
+echo "NOTE: When prompted to remove i3lock, hit 'y'"
+yaourt -S i3lock-color
+
 echo "removing palemoon"
 sudo pacman -Rs palemoon-bin
 
