@@ -105,6 +105,15 @@ if [ -f ~/.config/clipit/clipitrc ]; then
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/clipitrc ~/.config/clipit/clipitrc
 
+echo "Conky"
+
+if [ ! -d ~/.config/conky ]; then
+  mkdir ~/.config/conky
+fi
+for file in ~/dotfiles-manjaro-i3/config/conky/*; do
+  ln -fs "$file" ~/.config/conky/
+done
+
 echo "Ranger"
 
 if [ ! -d ~/.config/ranger ]; then
@@ -179,7 +188,7 @@ echo "compton"
 if [ -f ~/.compton.conf ]; then
   mv ~/.compton.conf ~/.compton.conf.pre-dotfiles-bak
 fi
-ln -fs ~/dotfiles-manjaro-i3/config/.compton.conf ~/.compton.conf
+ln -fs ~/dotfiles-manjaro-i3/config/.compton.conf ~/.config/compton.conf
 
 echo ".xprofile"
 
