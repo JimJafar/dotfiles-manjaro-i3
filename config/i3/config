@@ -47,19 +47,19 @@ focus_follows_mouse no
 # exec_always --no-startup-id "sh $HOME/dotfiles-manjaro-i3/scripts/setup-displays.sh"
 
 # hide title bars
-for_window [class="^.*"] border pixel 2
-new_window pixel 2
+for_window [class="^.*"] border pixel 1
+new_window pixel 1
 
 # enable title bars for floating windows
-new_float normal 2
+new_float normal 1
 
 # Hide borders
-hide_edge_borders none
+# hide_edge_borders none
 
 # change borders
-bindsym $mod+u border none
-bindsym $mod+y border pixel 1
-bindsym $mod+n border normal
+# bindsym $mod+u border none
+# bindsym $mod+y border pixel 1
+# bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -341,11 +341,12 @@ bindsym $mod+l exec --no-startup-id ~/lock-i3.sh
 # bindsym $mod+l exec --no-startup-id blurlock
 
 # window colors
-#                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          $urgent-bg-color
-client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color $urgent-bg-color
-client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $urgent-bg-color
-client.urgent           $urgent-bg-color    $urgent-bg-color   $urgent-text-color   $urgent-bg-color
+# Note that for the window decorations, the color around the child window is the "child_border", and "border" color is only the two thin lines around the titlebar.
+#                       border              background         text                 indicator        child border
+client.focused          $inactive-bg-color  $bg-color          $text-color          $urgent-bg-color $urgent-bg-color
+client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color $urgent-bg-color $inactive-bg-color
+client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $urgent-bg-color $inactive-bg-color
+client.urgent           $urgent-bg-color    $urgent-bg-color   $urgent-text-color   $urgent-bg-color $inactive-bg-color
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -450,10 +451,8 @@ exec --no-startup-id franz
 #############################
 
 # Set inner/outer gaps
-gaps inner 30
+gaps inner 0
 gaps outer 0
-# gaps inner 0
-# gaps outer 0
 
 ## Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 ## gaps inner|outer current|all set|plus|minus <px>
@@ -465,43 +464,52 @@ smart_gaps on
 
 ## Smart borders (draw borders around container only if it is not the only container on this workspace)
 ## on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-smart_borders on
+# smart_borders on
+
+set $mode_gaps Toggle gaps: (1) on (2) off
+bindsym $mod+Shift+g mode "$mode_gaps"
+mode "$mode_gaps" {
+    bindsym 1 mode "default", gaps inner all set 30
+    bindsym 2 mode "default", gaps inner all set 0
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
-set $mode_gaps Gaps: (o) outer, (i) inner
-set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
-set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-bindsym $mod+Shift+g mode "$mode_gaps"
-
-mode "$mode_gaps" {
-        bindsym o      mode "$mode_gaps_outer"
-        bindsym i      mode "$mode_gaps_inner"
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-
-mode "$mode_gaps_inner" {
-        bindsym plus  gaps inner current plus 5
-        bindsym minus gaps inner current minus 5
-        bindsym 0     gaps inner current set 0
-
-        bindsym Shift+plus  gaps inner all plus 5
-        bindsym Shift+minus gaps inner all minus 5
-        bindsym Shift+0     gaps inner all set 0
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-
-mode "$mode_gaps_outer" {
-        bindsym plus  gaps outer current plus 5
-        bindsym minus gaps outer current minus 5
-        bindsym 0     gaps outer current set 0
-
-        bindsym Shift+plus  gaps outer all plus 5
-        bindsym Shift+minus gaps outer all minus 5
-        bindsym Shift+0     gaps outer all set 0
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
+# set $mode_gaps Gaps: (o) outer, (i) inner
+# set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+# set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+# bindsym $mod+Shift+g mode "$mode_gaps"
+#
+# mode "$mode_gaps" {
+#         bindsym o      mode "$mode_gaps_outer"
+#         bindsym i      mode "$mode_gaps_inner"
+#         bindsym Return mode "default"
+#         bindsym Escape mode "default"
+# }
+#
+# mode "$mode_gaps_inner" {
+#         bindsym plus  gaps inner current plus 5
+#         bindsym minus gaps inner current minus 5
+#         bindsym 0     gaps inner current set 0
+#
+#         bindsym Shift+plus  gaps inner all plus 5
+#         bindsym Shift+minus gaps inner all minus 5
+#         bindsym Shift+0     gaps inner all set 0
+#
+#         bindsym Return mode "default"
+#         bindsym Escape mode "default"
+# }
+#
+# mode "$mode_gaps_outer" {
+#         bindsym plus  gaps outer current plus 5
+#         bindsym minus gaps outer current minus 5
+#         bindsym 0     gaps outer current set 0
+#
+#         bindsym Shift+plus  gaps outer all plus 5
+#         bindsym Shift+minus gaps outer all minus 5
+#         bindsym Shift+0     gaps outer all set 0
+#
+#         bindsym Return mode "default"
+#         bindsym Escape mode "default"
+# }
