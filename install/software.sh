@@ -149,6 +149,9 @@ echo "mlocate and catfish for search"
 sudo pacman -S --noconfirm mlocate
 sudo pacman -S --noconfirm catfish
 
+echo "cmatrix"
+sudo pacman -S cmatrix
+
 echo "ranger"
 sudo pacman -S --noconfirm ranger
 

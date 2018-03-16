@@ -114,6 +114,9 @@ alias vpnMXup="nmcli con up jim-mx-vpn"
 alias vpnMXdown="nmcli con down jim-mx-vpn"
 alias vpnSup="nmcli con up sangwinenet"
 alias vpnSdown="nmcli con down sangwinenet"
+# fun aliases
+alias starwarsascii="telnet towel.blinkenlights.nl"
+alias cmatrix="cmatrix -C cyan"
 
 # BASH completion
 source /etc/bash_completion.d/climate_completion
