@@ -277,10 +277,10 @@ assign [class="Google-chrome"] $workspace1
 assign [class="Firefox"] $workspace1
 assign [class="Skype"] $workspace8
 assign [class="Geary"] $workspace9
-assign [class="Franz"] $workspace8
 assign [class="Spotify"] $workspace10
 # Spotify doesn't play nice
 for_window [class="Spotify"] move to workspace $workspace10
+for_window [class="Google-chrome" title=".*WhatsApp.*"] move to workspace $workspace8
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -343,7 +343,7 @@ bindsym $mod+l exec --no-startup-id ~/lock-i3.sh
 # window colors
 # Note that for the window decorations, the color around the child window is the "child_border", and "border" color is only the two thin lines around the titlebar.
 #                       border              background         text                 indicator        child border
-client.focused          $inactive-bg-color  $bg-color          $text-color          $urgent-bg-color $urgent-bg-color
+client.focused          $inactive-bg-color  $bg-color          $text-color          $urgent-bg-color $inactive-bg-color
 client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color $urgent-bg-color $inactive-bg-color
 client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $urgent-bg-color $inactive-bg-color
 client.urgent           $urgent-bg-color    $urgent-bg-color   $urgent-text-color   $urgent-bg-color $inactive-bg-color
