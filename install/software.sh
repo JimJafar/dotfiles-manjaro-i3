@@ -159,8 +159,14 @@ echo "i3lock-color"
 echo "NOTE: When prompted to remove i3lock, hit 'y'"
 yaourt -S i3lock-color
 
+echo "redshift"
+sudo pacman -S --noconfirm redshift
+
 echo "removing palemoon"
 sudo pacman -Rs palemoon-bin
+
+echo "removing pcmanfm"
+sudo pacman -Rs --noconfirm pcmanfm
 
 echo "To complete postgres setup:"
 echo "sudo -u postgres -i"

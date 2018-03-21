@@ -101,11 +101,11 @@ bindsym XF86MonBrightnessDown exec "xbacklight -dec 10"
 bindsym Print exec screenshot
 
 # Start Applications
-bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
+bindsym $mod+Ctrl+b exec terminator -e 'bmenu'
 bindsym $mod+F2 exec palemoon
-bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
-bindsym $mod+Shift+F3 exec gksu pcmanfm
+bindsym $mod+Ctrl+e exec thunar
+bindsym $mod+Ctrl+Shift+e exec gksu thunar
 bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
@@ -183,6 +183,13 @@ bindsym $mod+Shift+minus move scratchpad
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+minus scratchpad show
+
+# give focus to the most recently "urgent" workspace
+bindsym $mod+u [urgent="latest"] focus
+
+# alt-tab and shift-tab to switch between workspaces
+bindsym Mod1+Tab workspace next
+bindsym Mod1+Shift+Tab workspace prev
 
 #navigate workspaces next / previous
 #bindsym $mod+Ctrl+Right workspace next
@@ -417,6 +424,7 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id sleep 10; /usr/bin/kdeconnect-indicator
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
+exec --no-startup-id redshift-gtk -c "$HOME/.config/redshift.conf"
 
 # persistent daemons
 
@@ -431,7 +439,7 @@ exec --no-startup-id dropbox
 exec_always --no-startup-id "sh $HOME/dotfiles-manjaro-i3/scripts/trackpad-setup.sh"
 exec --no-startup-id "ruby $HOME/dotfiles-manjaro-i3/scripts/i3-floating-titles.rb"
 exec --no-startup-id xautolock -time 3 -locker ~/lock-i3.sh
-exec --no-startup-id $HOME/dotfiles-manjaro-i3/scripts/start-conky
+exec --no-startup-id "$HOME/dotfiles-manjaro-i3/scripts/start-conky"
 exec_always --no-startup-id nitrogen --restore; sleep 1; compton -b
 
 # Manjaro stuff

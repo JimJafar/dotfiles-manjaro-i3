@@ -204,6 +204,13 @@ if [ -f ~/.Xresources ]; then
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/.Xresources ~/.Xresources
 
+echo "redshift"
+
+if [ -f ~/.config/redshift.conf ]; then
+  mv ~/.config/redshift.conf ~/.config/redshift.conf.pre-dotfiles-bak
+fi
+ln -fs ~/dotfiles-manjaro-i3/config/redshift.conf ~/.config/redshift.conf
+
 echo "MIME apps"
 
 if [ -f ~/.config/mimeapps.list ]; then
