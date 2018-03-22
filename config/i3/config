@@ -283,6 +283,7 @@ for_window [class="Epdfview"] floating enable
 assign [class="Google-chrome"] $workspace1
 assign [class="Firefox"] $workspace1
 assign [class="Skype"] $workspace8
+assign [class="Google-chrome" title=".*WhatsApp.*"] $workspace8
 assign [class="Geary"] $workspace9
 assign [class="Spotify"] $workspace10
 # Spotify doesn't play nice
