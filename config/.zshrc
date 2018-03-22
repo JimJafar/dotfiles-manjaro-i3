@@ -118,9 +118,6 @@ alias vpnSdown="nmcli con down sangwinenet"
 alias starwarsascii="telnet towel.blinkenlights.nl"
 alias cmatrix="cmatrix -C cyan"
 
-# BASH completion
-source /etc/bash_completion.d/climate_completion
-
 # Script to allow opening terminator with continuous commands
 # Enter custom commands in ~/.config/terminator/config like this:
 # env INIT_CMD="cd bla; npm start" zsh
