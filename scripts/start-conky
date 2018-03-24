@@ -1,6 +1,6 @@
 #!/bin/bash
 
 # conky -c ~/.config/conky/conky_shortcuts_live_solarized &&
-conky -c ~/.config/conky/conky_solarized &&
+conky -c ~/.config/conky/conky_solarized_dark &&
 
 exit 0

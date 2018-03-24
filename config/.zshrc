@@ -104,7 +104,7 @@ export NVM_DIR="$HOME/.nvm"
 
 alias cdmxb="cd ~/Documents/code/maritimexchange-backend/"
 alias cdmx="cd ~/Documents/code/maritimexchange/"
-alias mx="terminator --layout mx"
+alias mx="cdmxb && npm start & termite --hold -e \"zsh -c '$(alias_value cdmx) && npm start'\""
 alias c="tput reset"
 alias disconnectWiFi="nmcli d disconnect wlp2s0"
 alias screenSingle1080="sh ~/.screenlayout/single-1080.sh"
@@ -117,22 +117,6 @@ alias vpnSdown="nmcli con down sangwinenet"
 # fun aliases
 alias starwarsascii="telnet towel.blinkenlights.nl"
 alias cmatrix="cmatrix -C cyan"
-
-# Script to allow opening terminator with continuous commands
-# Enter custom commands in ~/.config/terminator/config like this:
-# env INIT_CMD="cd bla; npm start" zsh
-echo $INIT_CMD
-if [ ! -z "$INIT_CMD" ]; then
-    OLD_IFS=$IFS
-    setopt shwordsplit
-    IFS=';'
-    for cmd in $INIT_CMD; do
-        print -s "$cmd"  # add to history
-        eval $cmd
-    done
-    unset INIT_CMD
-    IFS=$OLD_IFS
-fi
 
 # MOTD
 if [[ -d ~/.motd.d ]]; then

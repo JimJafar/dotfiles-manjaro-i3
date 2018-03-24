@@ -44,15 +44,15 @@ echo "file templates"
 
 sh ~/dotfiles-manjaro-i3/install/templates.sh
 
-echo "terminator"
+echo "termite"
 
-if [ ! -d ~/.config/terminator ]; then
-  mkdir ~/.config/terminator
+if [ ! -d ~/.config/termite ]; then
+  mkdir ~/.config/termite
 fi
-if [ -f ~/.config/terminator/config ]; then
-  mv ~/.config/terminator/config ~/.config/terminator/config.pre-dotfiles-bak
+if [ -f ~/.config/termite/config ]; then
+  mv ~/.config/termite/config ~/.config/termite/config.pre-dotfiles-bak
 fi
-ln -fs ~/dotfiles-manjaro-i3/config/.terminator ~/.config/terminator/config
+ln -fs ~/dotfiles-manjaro-i3/config/termite/config ~/.config/termite/config
 
 echo "polybar"
 
@@ -174,7 +174,11 @@ ln -fs ~/dotfiles-manjaro-i3/config/.gtkrc-2.0.mine ~/.gtkrc-2.0.mine
 if [ -f ~/.config/gtk-3.0/settings.ini ]; then
   mv ~/.config/gtk-3.0/settings.ini ~/.config/gtk-3.0/settings.ini.pre-dotfiles-bak
 fi
+if [ -f ~/.config/gtk-3.0/gtk.css ]; then
+  mv ~/.config/gtk-3.0/gtk.css ~/.config/gtk-3.0/gtk.css.pre-dotfiles-bak
+fi
 ln -fs ~/dotfiles-manjaro-i3/config/gtk-3.0/settings.ini ~/.config/gtk-3.0/
+ln -fs ~/dotfiles-manjaro-i3/config/gtk-3.0/gtk.css ~/.config/gtk-3.0/
 
 echo "screen layouts"
 

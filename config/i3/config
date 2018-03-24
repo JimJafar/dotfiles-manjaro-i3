@@ -69,7 +69,7 @@ font xft:Noto Sans 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -101,12 +101,12 @@ bindsym XF86MonBrightnessDown exec "xbacklight -dec 10"
 bindsym Print exec screenshot
 
 # Start Applications
-bindsym $mod+Ctrl+b exec terminator -e 'bmenu'
+bindsym $mod+Ctrl+b exec termite -e 'bmenu'
 bindsym $mod+F2 exec palemoon
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Ctrl+e exec thunar
 bindsym $mod+Ctrl+Shift+e exec gksu thunar
-bindsym $mod+F5 exec terminal -e 'mocp'
+bindsym $mod+F5 exec termite -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
@@ -460,7 +460,7 @@ exec --no-startup-id franz
 #############################
 
 # Set inner/outer gaps
-gaps inner 0
+gaps inner 15
 gaps outer 0
 
 ## Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
@@ -478,7 +478,7 @@ smart_gaps on
 set $mode_gaps Toggle gaps: (1) on (2) off
 bindsym $mod+Shift+g mode "$mode_gaps"
 mode "$mode_gaps" {
-    bindsym 1 mode "default", gaps inner all set 30
+    bindsym 1 mode "default", gaps inner all set 15
     bindsym 2 mode "default", gaps inner all set 0
     bindsym Return mode "default"
     bindsym Escape mode "default"

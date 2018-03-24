@@ -42,8 +42,8 @@ sudo pacman -S --noconfirm python-pip
 echo "i3ipc"
 gem install i3ipc
 
-echo "terminator"
-sudo pacman -S --noconfirm terminator
+echo "termite"
+sudo pacman -S --noconfirm termite
 
 echo "Google chrome"
 yaourt -S --noconfirm google-chrome

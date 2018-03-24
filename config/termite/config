@@ -1,0 +1,48 @@
+[options]
+allow_bold = true
+cursor_blink = system
+cursor_shape = block
+dynamic_title = true
+font = Noto Mono 11
+icon_name = terminal
+modify_other_keys = false
+mouse_autohide = false
+scroll_on_output = false
+scroll_on_keystroke = true
+scrollback_lines = 10000
+size_hints = false
+search_wrap = true
+urgent_on_bell = true
+highlight = #30343e
+
+[colors]
+background = rgba(0, 43, 54, 0.85)
+foreground = #d7dde8
+foreground_bold = #cac4ce
+cursor = #6daedb
+cursor_foreground = #2f343f
+
+# BLACK
+color0  = #4e5b79
+color8  = #4a5265
+# RED
+color1  = #c6878f
+color9  = #c56975
+# GREEN
+color2  = #8eb897
+color10 = #70ad7d
+# YELLOW
+color3  = #f3dfa2
+color11 = #dfca88
+# BLUE
+color4  = #6daedb
+color12 = #5a9dcc
+# MAGENTA
+color5  = #ddbdd5
+color13 = #c3a3bb
+# CYAN
+color6  = #ddfff7
+color14 = #a9dede
+# WHITE
+color7  = #f8f4e3
+color15 = #d5d0be
