@@ -3,7 +3,7 @@ conky.config = {
 	background = true,
         draw_shades = false,
         default_color = '93A1A1',
-        color2 = '586E75',
+        color2 = '2aa198',
 	cpu_avg_samples = 2,
 	double_buffer = true,
 	font = 'Bitstream Vera Sans:size=8',
