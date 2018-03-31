@@ -54,17 +54,7 @@ if [ -f ~/.config/termite/config ]; then
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/termite/config ~/.config/termite/config
 
-echo "polybar"
-
-if [ ! -d ~/.config/polybar ]; then
-  mkdir ~/.config/polybar
-fi
-if [ -f ~/.config/polybar/config ]; then
-  mv ~/.config/polybar/config ~/.config/polybar/config.pre-dotfiles-bak
-fi
-ln -fs ~/dotfiles-manjaro-i3/config/polybar/config ~/.config/polybar/config
-
-echo "rofi"
+echo "rofi themes"
 
 if [ ! -d ~/.config/rofi ]; then
   mkdir ~/.config/rofi
@@ -72,10 +62,6 @@ fi
 if [ -d ~/.config/rofi/themes ]; then
   mv ~/.config/rofi/themes ~/.config/rofi/themes.pre-dotfiles-bak
 fi
-if [ -f ~/.config/rofi/config ]; then
-  mv ~/.config/rofi/config ~/.config/rofi/config.pre-dotfiles-bak
-fi
-ln -fs ~/dotfiles-manjaro-i3/config/rofi/config ~/.config/rofi/config
 ln -fs ~/dotfiles-manjaro-i3/config/rofi/themes ~/.config/rofi/themes
 
 echo "Thunar"
@@ -140,25 +126,35 @@ ln -fs ~/dotfiles-manjaro-i3/config/ranger/rc.conf ~/.config/ranger/rc.conf
 ln -fs ~/dotfiles-manjaro-i3/config/ranger/rifle.conf ~/.config/ranger/rifle.conf
 ln -fs ~/dotfiles-manjaro-i3/config/ranger/scope.sh ~/.config/ranger/scope.sh
 
-echo "i3"
+echo "wpgtk"
 
-if [ ! -d ~/.i3 ]; then
-  mkdir ~/.i3
+if [ ! -d ~/.config/wpg ]; then
+  mkdir ~/.config/wpg
 fi
-if [ -f ~/.i3/config ]; then
-  mv ~/.i3/config ~/.i3/config.pre-dotfiles-bak
+if [ -d ~/.config/wpg/templates ]; then
+  mv ~/.config/wpg/templates ~/.config/wpg/templates.pre-dotfiles-bak
 fi
-ln -fs ~/dotfiles-manjaro-i3/config/i3/config ~/.i3/config
+if [ -f ~/.config/wpg/wpg.conf ]; then
+  mv ~/.config/wpg/wpg.conf ~/.config/wpg/wpg.conf.pre-dotfiles-bak
+fi
+ln -fs ~/dotfiles-manjaro-i3/config/wpg/templates ~/.config/wpg/templates
+ln -fs ~/dotfiles-manjaro-i3/config/wpg/wpg.conf ~/.config/wpg/wpg.conf
+
+echo "i3 blocks"
 
 if [ -f ~/.config/i3/i3blocks.conf ]; then
   mv ~/.config/i3/i3blocks.conf ~/.config/i3/i3blocks.conf.pre-dotfiles-bak
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/i3/i3blocks.conf ~/.config/i3
 
+echo "i3 status"
+
 if [ -f ~/.i3status.conf ]; then
   mv ~/.i3status.conf ~/.i3status.conf.pre-dotfiles-bak
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/i3/i3status.conf ~/.i3status.conf
+
+echo "i3 lock"
 
 if [ ! -f ~/lock-i3.sh ]; then
   ln -fs ~/dotfiles-manjaro-i3/scripts/lock-i3.sh ~/lock-i3.sh

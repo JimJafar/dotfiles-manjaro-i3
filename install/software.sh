@@ -162,6 +162,9 @@ yaourt -S i3lock-color
 echo "redshift"
 sudo pacman -S --noconfirm redshift
 
+echo "wpgtk"
+yaourt -S --noconfirm wpgtk-git
+
 echo "YouTube downloader"
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 sudo chmod a+rx /usr/local/bin/youtube-dl

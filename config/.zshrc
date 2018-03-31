@@ -126,3 +126,6 @@ if [[ -d ~/.motd.d ]]; then
       fi
     done
 fi
+
+# wpgtk
+(cat ~/.config/wpg/sequences &)
