@@ -1,3 +1,5 @@
+# NOTE: colors in here will be overridden when using wpgtk
+
 [options]
 allow_bold = true
 cursor_blink = system

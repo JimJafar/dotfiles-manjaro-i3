@@ -1,3 +1,6 @@
+# wpgtk
+(cat ~/.config/wpg/sequences &)
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 
@@ -126,6 +129,3 @@ if [[ -d ~/.motd.d ]]; then
       fi
     done
 fi
-
-# wpgtk
-(cat ~/.config/wpg/sequences &)
