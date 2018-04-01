@@ -93,12 +93,10 @@ ln -fs ~/dotfiles-manjaro-i3/config/clipitrc ~/.config/clipit/clipitrc
 
 echo "Conky"
 
-if [ ! -d ~/.config/conky ]; then
-  mkdir ~/.config/conky
-fi
-for file in ~/dotfiles-manjaro-i3/config/conky/*; do
-  ln -fs "$file" ~/.config/conky/
-done
+if [ -d ~/.config/conky ]; then
+  mv ~/.config/conky ~/.config/conky.pre-dotfiles-bak
+fi 
+ln -fs  ~/dotfiles-manjaro-i3/config/conky ~/.config/
 
 echo "Ranger"
 
