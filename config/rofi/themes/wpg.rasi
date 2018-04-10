@@ -5,32 +5,32 @@
  * Copyright: Rasmus Steinke
  ******************************************************************************/
 * {
-    selected-normal-foreground:  #fffff5;
-    foreground:                  #f2e0aa;
+    selected-normal-foreground:  #f8feff;
+    foreground:                  #c7e9ff;
     normal-foreground:           @foreground;
-    alternate-normal-background: #2a1c17;
+    alternate-normal-background: #04152C;
     red:                         rgba ( 220, 50, 47, 100 % );
-    selected-urgent-foreground:  #fffff5;
+    selected-urgent-foreground:  #f8feff;
     blue:                        rgba ( 38, 139, 210, 100 % );
-    urgent-foreground:           #fffff5;
-    alternate-urgent-background: #7A8669;
-    active-foreground:           #f2e0aa;
-    lightbg:                     #cecbbf;
+    urgent-foreground:           #f8feff;
+    alternate-urgent-background: #8A98AC;
+    active-foreground:           #c7e9ff;
+    lightbg:                     #d4d9df;
     selected-active-foreground:  @foreground;
     alternate-active-background: @background-color;
     background:                  @background-color;
-    bordercolor:                 #C2906A;
+    bordercolor:                 #9CAFC2;
     alternate-normal-foreground: @foreground;
     normal-background:           @background-color;
-    lightfg:                     #2a1c17;
+    lightfg:                     #04152C;
     selected-normal-background:  @background-color;
     border-color:                @foreground;
     spacing:                     2;
-    separatorcolor:              #C2906A;
+    separatorcolor:              #9CAFC2;
     urgent-background:           @background-color;
-    selected-urgent-background:  #7A8669;
+    selected-urgent-background:  #8A98AC;
     alternate-urgent-foreground: @urgent-foreground;
-    background-color:            #2a1c17;
+    background-color:            #04152C;
     alternate-active-foreground: @active-foreground;
     active-background:           @background-color;
     selected-active-background:  @background-color;

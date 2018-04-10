@@ -21,7 +21,7 @@ secondary = #<COLORIN>
 alert = ${xrdb:color2:#<COLOR6>}
 
 [bar/jim]
-;monitor = ${env:MONITOR:HDMI-1}
+; monitor = ${env:MONITOR:HDMI-1}
 ; Make the bar load properly on multiple monitors
 ; https://github.com/jaagr/polybar/issues/763#issuecomment-331604987
 monitor = ${env:MONITOR:}

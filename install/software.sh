@@ -169,8 +169,11 @@ echo "YouTube downloader"
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 sudo chmod a+rx /usr/local/bin/youtube-dl
 
+echo "Microsoft OneDrive"
+yaourt -S --noconfirm onedrive-git
+
 echo "removing palemoon"
-sudo pacman -Rs palemoon-bin
+sudo pacman -Rs --noconfirm palemoon-bin
 
 echo "removing pcmanfm"
 sudo pacman -Rs --noconfirm pcmanfm
