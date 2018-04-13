@@ -243,6 +243,9 @@ ln -fs ~/dotfiles-manjaro-i3/config/nitrogen/nitrogen.cfg ~/.config/nitrogen/nit
 echo "autostart GNOME screensaver to enable lock screen"
 ln -fs /usr/share/applications/gnome-screensaver.desktop ~/.config/autostart/gnome-screensaver.desktop
 
+echo "simlink DropBox images to /Pictures"
+ln -fs ~/Dropbox/images/ ~/Pictures/Dropbox
+
 echo "changing default shell to zsh"
 sudo chsh -s /usr/bin/zsh
 sudo chsh -s /usr/bin/zsh jim
