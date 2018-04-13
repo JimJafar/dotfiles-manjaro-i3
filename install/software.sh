@@ -64,7 +64,7 @@ echo "atom"
 sudo pacman -S --noconfirm atom
 
 echo "IntelliJ IDEA"
-yaourt -S --noconfirm intellij-idea-ultimate-edition
+yaourt -S --noconfirm intellij-idea-ultimate-edition-jre
 
 echo "Spotify"
 yaourt -S --noconfirm spotify
@@ -135,9 +135,6 @@ yaourt -S --noconfirm docker-git
 echo "Libre Office"
 sudo pacman -S --noconfirm libreoffice-fresh
 
-echo "WPS Office"
-yaourt -S --noconfirm wps-office
-
 echo "kdeconnect"
 sudo pacman -S --noconfirm kdeconnect
 yaourt -S --noconfirm indicator-kdeconnect-git
@@ -171,6 +168,18 @@ sudo chmod a+rx /usr/local/bin/youtube-dl
 
 echo "Microsoft OneDrive"
 yaourt -S --noconfirm onedrive-git
+
+# GNOME START
+
+echo "Gnome"
+sudo pacman -S --noconfirm gnome
+sudo pacman -S --noconfirm gnome-extra
+sudo pacman -S --noconfirm adapta-gtk-theme
+sudo pacman -S --noconfirm arc-gtk-theme
+yaourt -S --noconfirm paper-gtk-theme-git
+yaourt -S --noconfirm chrome-gnome-shell-git
+
+# GNOME END
 
 echo "removing palemoon"
 sudo pacman -Rs --noconfirm palemoon-bin

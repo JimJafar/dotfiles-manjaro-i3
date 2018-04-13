@@ -29,6 +29,13 @@ fi
 ln -fs ~/dotfiles-manjaro-i3/config/.zshrc ~/.zshrc
 sudo ln -fs /home/jim/dotfiles-manjaro-i3/config/.zshrc /root/.zshrc
 
+echo "dconf"
+
+if [ -d ~/.config/dconf/user.d ]; then
+  mv ~/.config/dconf/user.d ~/.config/dconf/user.d-pre-dotfiles-bak
+fi
+ln -fs ~/dotfiles-manjaro-i3/config/dconf/user.d ~/.config/dconf
+
 echo "motd"
 
 if [ -d ~/.motd.d ]; then
@@ -95,7 +102,7 @@ echo "Conky"
 
 if [ -d ~/.config/conky ]; then
   mv ~/.config/conky ~/.config/conky.pre-dotfiles-bak
-fi 
+fi
 ln -fs  ~/dotfiles-manjaro-i3/config/conky ~/.config/
 
 echo "Ranger"

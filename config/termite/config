@@ -16,6 +16,7 @@ size_hints = false
 search_wrap = true
 urgent_on_bell = true
 highlight = #30343e
+geometry = 938x800
 
 [colors]
 background = rgba(0, 43, 54, 0.85)
