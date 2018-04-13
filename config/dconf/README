@@ -1,0 +1,9 @@
+# Write out the dconf database recursively as plain text, starting from the root:
+# dconf dump / > ~/.config/dconf/user.d/everything.conf
+#
+# Load back in:
+# cat ~/.config/dconf/user.d/*.dconf | dconf load /
+#
+# dconf watch /
+# to see all the configuration changes as they happen, then change
+# something in the GUI to find out where the relevant setting is.

@@ -1,0 +1,6 @@
+[org/gnome/shell/extensions/net/gfxmonk/shellshape/keybindings]
+next-window=['<Mod4>Right']
+prev-window=['<Mod4>Left']
+
+[org/gnome/shell/extensions/net/gfxmonk/shellshape/prefs]
+default-layout='vertical'

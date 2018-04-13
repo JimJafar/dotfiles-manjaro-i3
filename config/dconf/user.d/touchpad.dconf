@@ -1,0 +1,5 @@
+[org/gnome/desktop/peripherals/touchpad]
+natural-scroll=true
+click-method='fingers'
+speed=1.0
+send-events='enabled'

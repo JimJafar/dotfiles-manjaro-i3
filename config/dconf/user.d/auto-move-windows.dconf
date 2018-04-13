@@ -1,0 +1,2 @@
+[org/gnome/shell/extensions/auto-move-windows]
+application-list=['google-chrome.desktop:1', 'jetbrains-idea.desktop:3', 'spotify.desktop:10', 'chrome-hnpfjngllnobngcgfapefoaidbinmjnm-Default.desktop:8', 'geary-autostart.desktop:9', 'org.gnome.Geary.desktop:9']
