@@ -174,6 +174,7 @@ yaourt -S --noconfirm onedrive-git
 echo "Gnome"
 sudo pacman -S --noconfirm gnome
 sudo pacman -S --noconfirm gnome-extra
+sudo pacman -S --noconfirm gnome-screensaver
 sudo pacman -S --noconfirm adapta-gtk-theme
 sudo pacman -S --noconfirm arc-gtk-theme
 yaourt -S --noconfirm paper-gtk-theme-git

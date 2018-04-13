@@ -240,6 +240,9 @@ fi
 ln -fs ~/dotfiles-manjaro-i3/config/nitrogen/bg-saved.cfg ~/.config/nitrogen/bg-saved.cfg
 ln -fs ~/dotfiles-manjaro-i3/config/nitrogen/nitrogen.cfg ~/.config/nitrogen/nitrogen.cfg
 
+echo "autostart GNOME screensaver to enable lock screen"
+ln -fs /usr/share/applications/gnome-screensaver.desktop ~/.config/autostart/gnome-screensaver.desktop
+
 echo "changing default shell to zsh"
 sudo chsh -s /usr/bin/zsh
 sudo chsh -s /usr/bin/zsh jim
