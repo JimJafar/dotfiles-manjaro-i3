@@ -45,6 +45,9 @@ gem install i3ipc
 echo "termite"
 sudo pacman -S --noconfirm termite
 
+echo "terminator"
+sudo pacman -S --noconfirm terminator
+
 echo "Google chrome"
 yaourt -S --noconfirm google-chrome
 

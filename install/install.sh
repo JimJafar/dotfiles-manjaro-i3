@@ -61,6 +61,16 @@ if [ -f ~/.config/termite/config ]; then
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/termite/config ~/.config/termite/config
 
+echo "terminator"
+
+if [ ! -d ~/.config/terminator ]; then
+  mkdir ~/.config/terminator
+fi
+if [ -f ~/.config/terminator/config ]; then
+  mv ~/.config/terminator/config ~/.config/terminator/config.pre-dotfiles-bak
+fi
+ln -fs ~/dotfiles-manjaro-i3/config/terminator/config ~/.config/terminator/config
+
 echo "rofi themes"
 
 if [ ! -d ~/.config/rofi ]; then
