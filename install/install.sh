@@ -195,6 +195,16 @@ if [ -f ~/.compton.conf ]; then
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/.compton.conf ~/.config/compton.conf
 
+echo "OneDrive"
+
+if [ ! -d ~/.config/onedrive ]; then
+  mkdir ~/.config/onedrive
+fi
+if [ -f ~/.config/onedrive/sync_list ]; then
+  mv ~/.config/onedrive/sync_list ~/.config/onedrive/sync_list.pre-dotfiles-bak
+fi
+ln -fs ~/dotfiles-manjaro-i3/config/onedrive/sync_list ~/.config/onedrive/sync_list
+
 echo ".xprofile"
 
 if [ -f ~/.xprofile ]; then
