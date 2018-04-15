@@ -131,3 +131,19 @@ if [[ -d ~/.motd.d ]]; then
       fi
     done
 fi
+
+# Script to allow opening terminator with continuous commands
+# Enter custom commands in ~/.config/terminator/config like this:
+# env INIT_CMD="cd bla; npm start" zsh
+echo $INIT_CMD
+if [ ! -z "$INIT_CMD" ]; then
+    OLD_IFS=$IFS
+    setopt shwordsplit
+    IFS=';'
+    for cmd in $INIT_CMD; do
+        print -s "$cmd"  # add to history
+        eval $cmd
+    done
+    unset INIT_CMD
+    IFS=$OLD_IFS
+fi

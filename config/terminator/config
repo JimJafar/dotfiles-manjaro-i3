@@ -63,7 +63,8 @@
     background_darkness = 0.9
     background_type = transparent
     cursor_color = "#aaaaaa"
-    custom_command = cd ~/Documents/code/maritimexchange-backend; npm start
+    custom_command = env INIT_CMD="cd ~/Documents/code/maritimexchange-backend; npm start" zsh
+    login_shell = True
     scrollback_infinite = True
     use_custom_command = True
     use_theme_colors = True
@@ -71,8 +72,8 @@
     background_darkness = 0.9
     background_type = transparent
     cursor_color = "#aaaaaa"
-    custom_command = cd ~/Documents/code/maritimexchange; npm start
-    exit_action = hold
+    custom_command = env INIT_CMD="cd ~/Documents/code/maritimexchange; npm start" zsh
+    login_shell = True
     scrollback_infinite = True
     use_custom_command = True
     use_theme_colors = True
