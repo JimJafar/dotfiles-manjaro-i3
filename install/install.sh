@@ -276,9 +276,6 @@ sh ~/dotfiles-manjaro-i3/scripts/trackpad-setup.sh
 echo "setting compose key to right-alt"
 setxkbmap -option compose:ralt
 
-echo "executable scripts"
-sudo ln -fs ~/dotfiles-manjaro-i3/scripts/mx /usr/local/bin/mx
-
 echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
 echo "- FINISHED CONFIG SETUP                                       -"
 echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
