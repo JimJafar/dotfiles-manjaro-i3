@@ -185,9 +185,6 @@ yaourt -S --noconfirm chrome-gnome-shell-git
 
 # GNOME END
 
-echo "Apple keyboard fix - might need to sudo pacman -S linux-headers first"
-yaourt -S --noconfirm hid-apple-patched-git-dkms
-
 echo "removing palemoon"
 sudo pacman -Rs --noconfirm palemoon-bin
 
