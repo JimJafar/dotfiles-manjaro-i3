@@ -20,14 +20,14 @@ font pango: <FONTS> 10
 # font, it doesn’t scale on retina/hidpi displays.
 
 # wpgtk colour bindings
-set $bg-color            "#<COLORACT>"
-set $opaque-bg-color     "argb:D8<COLORACT>"
-set $inactive-bg-color   "#<COLORIN>"
-set $text-color          "#<COLOR15>"
-set $inactive-text-color "#<COLOR15>"
-set $urgent-bg-color     "#<COLOR2>"
-set $urgent-text-color   "#<COLOR15>"
-set $highlight-color     "#<COLOR13>"
+set $bg-color            "#<GTKTHEMEBG4>"
+set $opaque-bg-color     "argb:D8<GTKTHEMEBG4>"
+set $inactive-bg-color   "#<GTKTHEMEBG1>"
+set $text-color          "#<GTKTHEMEFG2>"
+set $inactive-text-color "#<GTKTHEMEFG1>"
+set $urgent-bg-color     "#<GTKTHEMEURGENT>"
+set $urgent-text-color   "#<GTKTHEMEFG2>"
+set $highlight-color     "#<GTKTHEMEHI>"
 
 # Solarised colours
 # set $bg-color            #0A323D

@@ -15,15 +15,15 @@ scrollback_lines = 10000
 size_hints = false
 search_wrap = true
 urgent_on_bell = true
-highlight = #5294E2
+highlight = #<GTKTHEMEHI>
 geometry = 938x800
 
 [colors]
-background = rgba(56, 60, 74, 0.85)
-foreground = #C6CDD6
-foreground_bold = #F8F8F8
-cursor = #5294E2
-cursor_foreground = #383C4A
+background = rgba(<GTKTHEMEBG2RGB>, 0.85)
+foreground = #<GTKTHEMEFG1>
+foreground_bold = #<GTKTHEMEFG2>
+cursor = #<GTKTHEMEHI>
+cursor_foreground = #<GTKTHEMEBG2>
 
 # BLACK
 color0  = #4e5b79

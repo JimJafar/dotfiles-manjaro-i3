@@ -1,13 +1,13 @@
 
 /* Default color scheme */
-@define-color bg_color #181818;
-@define-color fg_color #fff;
-@define-color base_color #101010;
-@define-color text_color #fff;
-@define-color selected_bg_color #<COLORACT>;
-@define-color selected_fg_color #fff;
-@define-color tooltip_bg_color #202020;
-@define-color tooltip_fg_color #fff;
+@define-color bg_color #<GTKTHEMEBG1>;
+@define-color fg_color #<GTKTHEMEFG2>;
+@define-color base_color #<GTKTHEMEBG2>;
+@define-color text_color #<GTKTHEMEFG1>;
+@define-color selected_bg_color #<GTKTHEMEHI>;
+@define-color selected_fg_color #<GTKTHEMEBG2>;
+@define-color tooltip_bg_color #<GTKTHEMEBG3>;
+@define-color tooltip_fg_color #<GTKTHEMEFG2>;
 
 /* colormap actually used by the theme, to be overridden in other css files */
 @define-color theme_bg_color @bg_color;

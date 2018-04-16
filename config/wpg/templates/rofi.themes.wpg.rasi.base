@@ -1,39 +1,40 @@
-/******************************************************************************
- * ROFI Color theme for use with wpgtk: https://deviantfero.github.io/wpgtk/
- * Adapted from solarized alternate: https://github.com/DaveDavenport/rofi-themes/tree/master/Official%20Themes#solarized_alternate
- * User: Rasi
- * Copyright: Rasmus Steinke
- ******************************************************************************/
+/************************************************
+ * ROFI Color theme
+ * User: leofa
+ * Copyright: 2017 leofa
+ * Adapted for wpgtk2 by Jim
+ ***********************************************/
+
 * {
-    selected-normal-foreground:  #<COLOR15>;
-    foreground:                  #<COLOR14>;
+    selected-normal-foreground:  rgba ( <GTKTHEMEFG2RGB>, 100 % );
+    foreground:                  rgba ( <GTKTHEMEFG1RGB>, 100 % );
     normal-foreground:           @foreground;
-    alternate-normal-background: #<COLOR0>;
+    alternate-normal-background: rgba ( <GTKTHEMEBG1RGB>, 59 % );
     red:                         rgba ( 220, 50, 47, 100 % );
-    selected-urgent-foreground:  #<COLOR15>;
+    selected-urgent-foreground:  rgba ( <GTKTHEMEFG2RGB>, 100 % );
     blue:                        rgba ( 38, 139, 210, 100 % );
-    urgent-foreground:           #<COLOR15>;
-    alternate-urgent-background: #<COLOR2>;
-    active-foreground:           #<COLOR14>;
-    lightbg:                     #<COLOR7>;
-    selected-active-foreground:  @foreground;
-    alternate-active-background: @background-color;
-    background:                  @background-color;
-    bordercolor:                 #<COLOR5>;
+    urgent-foreground:           rgba ( <GTKTHEMEURGENTRGB>, 100 % );
+    alternate-urgent-background: rgba ( <GTKTHEMEBG3RGB>, 90 % );
+    active-foreground:           rgba ( <GTKTHEMEHIRGB>, 95 % );
+    lightbg:                     rgba ( 238, 232, 213, 100 % );
+    selected-active-foreground:  rgba ( <GTKTHEMEFG2RGB>, 100 % );
+    alternate-active-background: rgba ( <GTKTHEMEBG3RGB>, 89 % );
+    background:                  rgba ( <GTKTHEMEBG2RGB>, 95 % );
     alternate-normal-foreground: @foreground;
-    normal-background:           @background-color;
-    lightfg:                     #<COLOR0>;
-    selected-normal-background:  @background-color;
-    border-color:                @foreground;
+    normal-background:           @background;
+    lightfg:                     rgba ( 88, 104, 117, 100 % );
+    selected-normal-background:  rgba ( <GTKTHEMEHIRGB>, 90 % );
+    border-color:                rgba ( 124, 131, 137, 100 % );
     spacing:                     2;
-    separatorcolor:              #<COLOR5>;
-    urgent-background:           @background-color;
-    selected-urgent-background:  #<COLOR2>;
+    separatorcolor:              rgba ( <GTKTHEMEBG2RGB>, 100 % );
+    urgent-background:           rgba ( <GTKTHEMEBG2RGB>, 17 % );
+    selected-urgent-background:  rgba ( <GTKTHEMEURGENTRGB>, 100 % );
     alternate-urgent-foreground: @urgent-foreground;
-    background-color:            #<COLOR0>;
+    background-color:            rgba ( 0, 0, 0, 0 % );
     alternate-active-foreground: @active-foreground;
-    active-background:           @background-color;
-    selected-active-background:  @background-color;
+    active-background:           rgba ( <GTKTHEMEBG2RGB>, 17 % );
+    selected-active-background:  rgba ( <GTKTHEMEHIRGB>, 100 % );
+    scrollbar:                   rgba ( <GTKTHEMEFG1RGB>, 60 % );
 }
 #window {
     background-color: @background;
@@ -45,7 +46,7 @@
     padding: 0;
 }
 #message {
-    border:       1px dash 0px 0px ;
+    border:       2px 0px 0px;
     border-color: @separatorcolor;
     padding:      1px;
 }
@@ -54,15 +55,15 @@
 }
 #listview {
     fixed-height: 0;
-    border:       2px dash 0px 0px ;
+    border:       2px 0px 0px;
     border-color: @separatorcolor;
-    spacing:      2px ;
+    spacing:      2px;
     scrollbar:    true;
-    padding:      2px 0px 0px ;
+    padding:      2px 0px 0px;
 }
 #element {
     border:  0;
-    padding: 1px ;
+    padding: 1px;
 }
 #element.normal.normal {
     background-color: @normal-background;
@@ -101,21 +102,27 @@
     text-color:       @alternate-active-foreground;
 }
 #scrollbar {
-    width:        4px ;
+    width:        4px;
     border:       0;
-    handle-width: 8px ;
+    handle-color: @normal-foreground;
+    handle-width: 8px;
+    color: @scrollbar;
     padding:      0;
 }
 #sidebar {
-    border:       2px dash 0px 0px ;
+    border:       2px 0px 0px;
     border-color: @separatorcolor;
+}
+#button {
+    spacing:    0;
+    text-color: @normal-foreground;
 }
 #button.selected {
     background-color: @selected-normal-background;
     text-color:       @selected-normal-foreground;
 }
 #inputbar {
-    spacing:    20px;
+    spacing:    0;
     text-color: @normal-foreground;
     padding:    1px;
 }
@@ -129,5 +136,14 @@
 }
 #prompt {
     spacing:    0;
+    text-color: @normal-foreground;
+}
+#inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+#textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em;
     text-color: @normal-foreground;
 }

@@ -11,14 +11,14 @@
 
 [colors]
 ; error = ${xrdb:color9:#<COLOR9>}
-background = ${xrdb:color8:#<COLOR8>}
-background-alt = ${xrdb:color8:#<COLOR8>}
-background-tray = ${xrdb:color8:#<COLOR8>}
-foreground = ${xrdb:color15:#<COLOR15>}
-foreground-alt = ${xrdb:color15:#<COLOR15>}
-primary = #<COLORACT>
-secondary = #<COLORIN>
-alert = ${xrdb:color2:#<COLOR6>}
+background = ${xrdb:gtkthemebg1:#<GTKTHEMEBG1>}
+background-alt = ${xrdb:gtkthemebg2:#<GTKTHEMEBG2>}
+background-tray = ${xrdb:gtkthemebg1:#<GTKTHEMEBG1>}
+foreground = ${xrdb:gtkthemefg1:#<GTKTHEMEFG1>}
+foreground-alt = ${xrdb:gtkthemefg2:#<GTKTHEMEFG2>}
+primary = #<GTKTHEMEFG2>
+secondary = #<GTKTHEMEFG1>
+alert = ${xrdb:gtkthemehi:#<GTKTHEMEHI>}
 
 [bar/jim]
 ; monitor = ${env:MONITOR:HDMI-1}
@@ -52,7 +52,7 @@ font-1 = FontAwesome:style=Regular:pixelsize=12
 
 modules-left = i3
 ;modules-center = mpd
-modules-right = pulseaudio filesystem xbacklight volume xkeyboard memory cpu wlan battery temperature date powermenu
+modules-right = pulseaudio filesystem xbacklight volume pulseaudio-tail memory cpu wlan battery temperature date powermenu
 
 ; Position of the system tray window
 ; If empty or undefined, tray support will be disabled
@@ -148,7 +148,8 @@ label-mode-background = ${colors.primary}
 ; Default: %icon%  %name%
 label-focused = %icon% %name%
 label-focused-background = ${colors.background-alt}
-label-focused-underline = ${colors.primary}
+label-focused-foreground = ${colors.alert}
+label-focused-underline = ${colors.alert}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
@@ -260,10 +261,11 @@ label-unmounted-foreground = ${colors.foreground-alt}
 type = internal/xbacklight
 
 format = <label> <bar>
-label = BL
+label = 
+format-underline = ${colors.secondary}
 
 bar-width = 10
-bar-indicator = |
+bar-indicator =
 bar-indicator-foreground = #ff
 bar-indicator-font = 2
 bar-fill = ─
@@ -401,12 +403,12 @@ label-volume-foreground = ${root.foreground}
 ;   <ramp-volume>
 ;   <bar-volume>
 ; format-muted = <label-muted>
-format-muted-prefix = " "
+format-muted-prefix = "mute "
 format-muted-foreground = ${colors.foreground-alt}
 
 ; Available tokens:
 ;   %percentage% (default)
-label-muted = muted
+label-muted = 
 
 ; bar-volume-width = 10
 ; bar-volume-foreground-0 = #55aa55
@@ -429,6 +431,17 @@ label-muted = muted
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
+
+[module/pulseaudio-tail]
+type = custom/script
+exec = ~/dotfiles-manjaro-i3/scripts/polybar-pulseaudio-tail.sh
+tail = true
+click-right = exec pavucontrol &
+click-left = ~/dotfiles-manjaro-i3/scripts/polybar-pulseaudio-tail.sh --mute
+scroll-up = ~/dotfiles-manjaro-i3/scripts/polybar-pulseaudio-tail.sh --up
+scroll-down = ~/dotfiles-manjaro-i3/scripts/polybar-pulseaudio-tail.sh --down
+label = 
+format-underline = ${colors.secondary}
 
 [module/battery]
 type = internal/battery

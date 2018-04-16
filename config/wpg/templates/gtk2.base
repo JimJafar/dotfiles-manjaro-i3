@@ -1,32 +1,32 @@
 #modded Numix gtkrc
 
-gtk-color-scheme = "bg_color:#<COLOR8>
-color0:#<COLOR0>
-color1:#<COLOR1>
-color2:#<COLOR2>
-color3:#<COLOR3>
-color4:#<COLOR4>
-color5:#<COLOR5>
-color6:#<COLOR6>
-color7:#<COLOR7>
-color8:#<COLOR8>
-color9:#<COLOR9>
-color10:#<COLOR10>
-color11:#<COLOR11>
-color12:#<COLOR12>
-color13:#<COLOR13>
-color14:#<COLOR14>
-color15:#<COLOR15>
-text_color:#<COLOR15>
-selected_bg_color:#<COLORACT>
-selected_fg_color:#<COLOR15>
-tooltip_bg_color:#<COLOR8>
-tooltip_fg_color:#<COLOR15>
-titlebar_bg_color:#<COLOR8>
-titlebar_fg_color:#<COLOR15>
-menu_bg_color:#<COLOR8>
-menu_fg_color:#<COLOR15>
-link_color:#<COLORACT>"
+gtk-color-scheme = "bg_color:#<GTKTHEMEBG2>
+# color0:#<COLOR0>
+# color1:#<COLOR1>
+# color2:#<COLOR2>
+# color3:#<COLOR3>
+# color4:#<COLOR4>
+# color5:#<COLOR5>
+# color6:#<COLOR6>
+# color7:#<COLOR7>
+# color8:#<COLOR8>
+# color9:#<COLOR9>
+# color10:#<COLOR10>
+# color11:#<COLOR11>
+# color12:#<COLOR12>
+# color13:#<COLOR13>
+# color14:#<COLOR14>
+# color15:#<COLOR15>
+text_color:#<GTKTHEMEFG2>
+selected_bg_color:#<GTKTHEMEHI>
+selected_fg_color:#<GTKTHEMEBG2>
+tooltip_bg_color:#<GTKTHEMEBG3>
+tooltip_fg_color:#<GTKTHEMEFG2>
+titlebar_bg_color:#<GTKTHEMEBG2>
+titlebar_fg_color:#<GTKTHEMEFG1>
+menu_bg_color:#<GTKTHEMEBG1>
+menu_fg_color:#<GTKTHEMEFG2>
+link_color:#<GTKTHEMEHI>"
 gtk-auto-mnemonics	= 1
 
 # Default Style
@@ -137,8 +137,8 @@ style "murrine-default" {
 	bg[ACTIVE] = @bg_color
 	bg[INSENSITIVE] = @bg_color
 
-	base[NORMAL] = shade(0.85, @color0)
-	base[PRELIGHT] = shade (0.85, @color0)
+	base[NORMAL] = shade(0.85, @titlebar_bg_color)
+	base[PRELIGHT] = shade (0.85, @titlebar_bg_color)
 	base[SELECTED] = @selected_bg_color
 	base[ACTIVE] = @selected_bg_color
 	base[INSENSITIVE] = shade (0.85, @bg_color)
@@ -329,7 +329,7 @@ style "metacity-frame" = "murrine-default" {
 	bg[SELECTED] = @selected_bg_color
 }
 
-style "murrine-statusbar" { 
+style "murrine-statusbar" {
   bg[NORMAL] = @bg_color
 }
 style "murrine-comboboxentry" = "murrine-entry" { }
@@ -504,7 +504,7 @@ class "PanelToplevel*" style "murrine-panel"
 widget_class "*PanelToplevel*" style "murrine-panel"
 widget_class "*notif*" style "murrine-panel"
 widget_class "*Notif*" style "murrine-panel"
-widget_class "*Tray*" style "murrine-panel" 
+widget_class "*Tray*" style "murrine-panel"
 widget_class "*tray*" style "murrine-panel"
 widget_class "*computertemp*" style "murrine-panel"
 widget_class "*Applet*Tomboy*" style "murrine-panel"

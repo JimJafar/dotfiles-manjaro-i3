@@ -131,7 +131,7 @@
     #  * foreground: use the same color as the foreground;
     #  * frame: use the same color as the frame;
     #  * anything else will be interpreted as a X color.
-    separator_color = "404552"
+    separator_color = "<GTKTHEMEBG1>"
 
     # Print a notification on startup.
     # This is mainly for error detection, since dbus (re-)starts dunst
@@ -155,7 +155,7 @@
 
 [frame]
     width = 1
-    color = "#4B5162"
+    color = "#<GTKTHEMEBG3>"
 
 [shortcuts]
 
@@ -182,18 +182,18 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#383C4A"
-    foreground = "#C6CDD6"
+    background = "#<GTKTHEMEBG2>"
+    foreground = "#<GTKTHEMEFG1>"
     timeout = 10
 
 [urgency_normal]
-    background = "#383C4A"
-    foreground = "#F8F8F8"
+    background = "#<GTKTHEMEBG2>"
+    foreground = "#<GTKTHEMEFG2>"
     timeout = 10
 
 [urgency_critical]
-    background = "#383C4A"
-    foreground = "#A54242"
+    background = "#<GTKTHEMEBG2>"
+    foreground = "#<GTKTHEMEURGENT>"
     timeout = 0
 
 
