@@ -52,7 +52,7 @@ font-1 = FontAwesome:style=Regular:pixelsize=12
 
 modules-left = i3
 ;modules-center = mpd
-modules-right = pulseaudio filesystem xbacklight volume pulseaudio-tail memory cpu wlan battery temperature date powermenu
+modules-right = pulseaudio filesystem memory cpu wlan vpn battery temperature volume pulseaudio-tail xbacklight date powermenu
 
 ; Position of the system tray window
 ; If empty or undefined, tray support will be disabled
@@ -253,9 +253,11 @@ mount-0 = /home
 ;   %free%
 ;   %used%
 ; Default: %mountpoint% %percentage_free%%
-label-mounted = %{F#666666}%{F-} %percentage_used%%
+label-mounted =  %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
+
+format-mounted-underline = ${colors.foreground}
 
 [module/xbacklight]
 type = internal/xbacklight
@@ -285,7 +287,7 @@ type = internal/cpu
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.secondary}
+format-underline = ${colors.foreground}
 label = %percentage:2%%
 
 [module/memory]
@@ -293,7 +295,7 @@ type = internal/memory
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.secondary}
+format-underline = ${colors.foreground}
 
 ; Available tokens:
 ;   %percentage_used% (default)
@@ -320,7 +322,7 @@ interface = wlp2s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = ${colors.secondary}
+format-connected-underline = ${colors.foreground}
 label-connected = %essid%
 
 format-disconnected =
@@ -335,6 +337,29 @@ ramp-signal-2 = 
 ramp-signal-3 = 
 ramp-signal-4 = 
 ramp-signal-foreground = ${colors.foreground-alt}
+
+[module/vpn]
+type = custom/script
+
+; Available tokens:
+;   %counter%
+; Command to be executed (using "/usr/bin/env sh -c [command]")
+exec = nmcli -f NAME,TYPE con show --active | awk -F" " '$2=="vpn" {print $1}'
+
+; Conditional command that, if defined, needs to exit successfully
+; before the main exec command is invoked.
+; Default: ""
+exec-if = nmcli -f NAME,TYPE con show --active | grep -q vpn
+
+; Will the script output continous content?
+; Default: false
+tail = true
+
+; Seconds to sleep between updates
+; Default: 2 (0 if `tail = true`)
+interval = 2
+
+format-underline = ${colors.foreground}
 
 [module/date]
 type = internal/date
@@ -392,6 +417,7 @@ mapped = false
 ;   <ramp-volume>
 ;   <bar-volume>
 format-volume = <label-volume> <ramp-volume>
+format-volume-underline = ${colors.foreground}
 
 ; Available tokens:
 ;   %percentage% (default)
