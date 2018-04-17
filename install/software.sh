@@ -6,6 +6,7 @@ echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
 
 echo "pulseaudio"
 install_pulseaudio
+sudo pacman -S --noconfirm pamixer
 
 echo "bluetooth"
 sudo pacman -S --noconfirm pulseaudio-bluetooth

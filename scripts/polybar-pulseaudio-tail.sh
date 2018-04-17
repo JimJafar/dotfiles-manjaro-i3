@@ -2,6 +2,10 @@
 
 sink=0
 
+if [ "$(pacmd list-sinks | grep name: | tail -n 1 | grep FiiO)" ]; then
+    sink=1
+fi
+
 volume_up() {
     pactl set-sink-volume $sink +1%
 }
@@ -15,12 +19,14 @@ volume_mute() {
 }
 
 volume_print() {
-    if [ "$(pacmd list-sinks | grep active | head -n 1 | grep speaker)" ]; then
-        icon="#1"
-    elif [ "$(pacmd list-sinks | grep active | head -n 1 | grep headphones)" ]; then
-        icon="#2"
+    if [ $sink == 1 ]; then
+        icon=""
+    elif [ "$(pacmd list-sinks | grep active | head -n $((sink+1)) | grep headphones)" ]; then
+        icon=""
+    elif [ "$(pacmd list-sinks | grep active | head -n $((sink+1)) | grep speaker)" ]; then
+        icon=""
     else
-        icon="#3"
+        icon="?"
     fi
 
     muted=$(pamixer --sink $sink --get-mute)
@@ -36,7 +42,7 @@ listen() {
     volume_print
 
     pactl subscribe | while read -r event; do
-        if echo "$event" | grep -q "#$sink"; then
+        if echo "$event" | grep -q "$sink"; then
             volume_print
         fi
     done
