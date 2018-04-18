@@ -14,3 +14,5 @@ I use `scripts/dotfiles` to auto generate some config files using the colour sch
 Usual disclaimer - I hope this helps you but please be careful, make sure you know what you're doing, and don't blindly run the scripts :)
 
 This project is licensed under the terms of the MIT license.
+
+![screenshot](screenshot.png)
