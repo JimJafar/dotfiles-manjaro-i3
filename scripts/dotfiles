@@ -1,0 +1,66 @@
+#!/usr/bin/env bash
+
+FAIL_COLOUR=$'\033[31;1m'
+PASS_COLOUR=$'\033[32;1m'
+END_COLOUR=$'\033[0m'
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+TEMPLATEDIR="${DIR/scripts/config\/templates\/}"
+COLOURSDIR="${DIR/scripts/config\/color-schemes\/}"
+
+declare -A TEMPLATES
+TEMPLATES[conky]="$HOME/.config/conky/conky_wpg"
+TEMPLATES[termite]="$HOME/.config/termite/config"
+TEMPLATES[dunst]="$HOME/.config/dunst/dunstrc"
+TEMPLATES[gtk2]="$HOME/.themes/FlatColor/gtk-2.0/gtkrc"
+TEMPLATES[gtk3.0]="$HOME/.themes/FlatColor/gtk-3.0/gtk.css"
+TEMPLATES[gtk3.20]="$HOME/.themes/FlatColor/gtk-3.20/gtk.css"
+TEMPLATES[i3]="$HOME/.config/i3/config"
+TEMPLATES[polybar]="$HOME/.config/polybar/config"
+TEMPLATES[rofi]="$HOME/.config/rofi/config"
+TEMPLATES[rofi.theme]="$HOME/.config/rofi/themes/wpg.rasi"
+
+COLOURSCHEMES=($COLOURSDIR*)
+SELECTEDCOLOURSCHEME=-1
+
+while [ $SELECTEDCOLOURSCHEME == -1 ]; do
+  printf "The following colour schemes are available:\n\n"
+
+  for ((i=0; i < ${#COLOURSCHEMES[@]}; i++)); do
+    echo "${i+1} - ${COLOURSCHEMES[$i]/$COLOURSDIR/}"
+  done
+  printf "\nWhich colour scheme would you like? (just enter the number)... "
+  read COLOURSCHEMENUMBER
+  [ $COLOURSCHEMENUMBER -ne 0 ] && [ ${COLOURSCHEMES[$COLOURSCHEMENUMBER-1]+exists} ] \
+    && SELECTEDCOLOURSCHEME="$COLOURSCHEMENUMBER-1" \
+    || printf "$FAIL_COLOUR\nInvalid selection\n\n$END_COLOUR"
+done
+
+printf "\n\nParsing ${COLOURSCHEMES[$SELECTEDCOLOURSCHEME]}...\n\n"
+
+eval source ${COLOURSCHEMES[$SELECTEDCOLOURSCHEME]}
+
+for i in "${!TEMPLATES[@]}"; do
+  FILE="$TEMPLATEDIR$i"
+  OUT="${TEMPLATES[$i]}"
+  printf "Generating $OUT\n"
+  cat $FILE | sed -e s/\<GTKTHEMEBG1\>/$GTKTHEMEBG1/g \
+                  -e s/\<GTKTHEMEBG2\>/$GTKTHEMEBG2/g \
+                  -e s/\<GTKTHEMEBG3\>/$GTKTHEMEBG3/g \
+                  -e s/\<GTKTHEMEBG4\>/$GTKTHEMEBG4/g \
+                  -e s/\<GTKTHEMEFG1\>/$GTKTHEMEFG1/g \
+                  -e s/\<GTKTHEMEFG2\>/$GTKTHEMEFG2/g \
+                  -e s/\<GTKTHEMEHI\>/$GTKTHEMEHI/g \
+                  -e s/\<GTKTHEMEURGENT\>/"$GTKTHEMEURGENT"/g \
+                  -e s/\<GTKTHEMEBG1RGB\>/"$GTKTHEMEBG1RGB"/g \
+                  -e s/\<GTKTHEMEBG2RGB\>/"$GTKTHEMEBG2RGB"/g \
+                  -e s/\<GTKTHEMEBG3RGB\>/"$GTKTHEMEBG3RGB"/g \
+                  -e s/\<GTKTHEMEBG4RGB\>/"$GTKTHEMEBG4RGB"/g \
+                  -e s/\<GTKTHEMEFG1RGB\>/"$GTKTHEMEFG1RGB"/g \
+                  -e s/\<GTKTHEMEFG2RGB\>/"$GTKTHEMEFG2RGB"/g \
+                  -e s/\<GTKTHEMEHIRGB\>/"$GTKTHEMEHIRGB"/g \
+                  -e s/\<GTKTHEMEURGENTRGB\>/"$GTKTHEMEURGENTRGB"/g \
+  | tee $OUT 1>/dev/null
+done
+
+printf "$PASS_COLOUR\n\nDONE$END_COLOUR\n"

@@ -1,6 +1,3 @@
-# wpgtk
-# (cat ~/.config/wpg/sequences &)
-
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 
@@ -105,10 +102,14 @@ export NVM_DIR="$HOME/.nvm"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias cdmxb="cd ~/Documents/code/maritimexchange-backend/"
-alias cdmx="cd ~/Documents/code/maritimexchange/"
-#alias mx="terminator --layout mx"
-alias mx="cdmxb && npm start & termite --hold -e \"zsh -c '$(alias_value cdmx) && npm start'\""
+MXDIR=~/Documents/code/maritimexchange/
+MXBDIR=~/Documents/code/maritimexchange-backend/
+
+alias dotfiles="~/dotfiles-manjaro-i3/scripts/dotfiles"
+alias cdmxb="cd $MXBDIR"
+alias cdmx="cd $MXDIR"
+# alias mx="terminator --layout mx"
+alias mx="cd $MXBDIR && npm start & termite --hold -e \"zsh -c 'cd $MXDIR && npm start'\""
 alias c="tput reset"
 alias disconnectWiFi="nmcli d disconnect wlp2s0"
 alias screenSingle1080="sh ~/.screenlayout/single-1080.sh"

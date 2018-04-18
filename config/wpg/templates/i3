@@ -1,1 +1,0 @@
-/home/jim/.config/i3/config

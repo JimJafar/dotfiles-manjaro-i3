@@ -59,7 +59,6 @@ fi
 if [ -f ~/.config/termite/config ]; then
   mv ~/.config/termite/config ~/.config/termite/config.pre-dotfiles-bak
 fi
-ln -fs ~/dotfiles-manjaro-i3/config/termite/config ~/.config/termite/config
 
 echo "terminator"
 
@@ -76,10 +75,6 @@ echo "rofi themes"
 if [ ! -d ~/.config/rofi ]; then
   mkdir ~/.config/rofi
 fi
-if [ -d ~/.config/rofi/themes ]; then
-  mv ~/.config/rofi/themes ~/.config/rofi/themes.pre-dotfiles-bak
-fi
-ln -fs ~/dotfiles-manjaro-i3/config/rofi/themes ~/.config/rofi/themes
 
 echo "Thunar"
 
@@ -96,7 +91,6 @@ fi
 if [ -f ~/.config/dunst/dunstrc ]; then
   mv ~/.config/dunst/dunstrc ~/.config/dunst/dunstrc.pre-dotfiles-bak
 fi
-ln -fs ~/dotfiles-manjaro-i3/config/dunstrc ~/.config/dunst/dunstrc
 
 echo "Clipit"
 
@@ -120,20 +114,23 @@ echo "Ranger"
 if [ ! -d ~/.config/ranger ]; then
   mkdir ~/.config/ranger
 fi
+
 if [ ! -d ~/.config/ranger/colorschemes ]; then
   mkdir ~/.config/ranger/colorschemes
 fi
+
 if [ -f ~/.config/ranger/rc.conf ]; then
   mv ~/.config/ranger/rc.conf ~/.config/ranger/rc.conf.pre-dotfiles-bak
 fi
-fi
+
 if [ -f ~/.config/ranger/rifle.conf ]; then
   mv ~/.config/ranger/rifle.conf ~/.config/ranger/rifle.conf.pre-dotfiles-bak
 fi
-fi
+
 if [ -f ~/.config/ranger/scope.sh ]; then
   mv ~/.config/ranger/scope.sh ~/.config/ranger/scope.sh.pre-dotfiles-bak
 fi
+
 if [ ! -f ~/.config/ranger/colorschemes/darkest_space.py ]; then
   ln -fs ~/dotfiles-manjaro-i3/config/ranger/colorschemes/darkest_space.py ~/.config/ranger/colorschemes/darkest_space.py
 fi
@@ -141,19 +138,15 @@ ln -fs ~/dotfiles-manjaro-i3/config/ranger/rc.conf ~/.config/ranger/rc.conf
 ln -fs ~/dotfiles-manjaro-i3/config/ranger/rifle.conf ~/.config/ranger/rifle.conf
 ln -fs ~/dotfiles-manjaro-i3/config/ranger/scope.sh ~/.config/ranger/scope.sh
 
-echo "wpgtk"
+echo "i3"
 
-if [ ! -d ~/.config/wpg ]; then
-  mkdir ~/.config/wpg
+if [ ! -d ~/.config/i3 ]; then
+  mkdir ~/.config/i3
 fi
-if [ -d ~/.config/wpg/templates ]; then
-  mv ~/.config/wpg/templates ~/.config/wpg/templates.pre-dotfiles-bak
+
+if [ -f ~/.config/i3/config ]; then
+  mv ~/.config/i3/config ~/.config/i3/config.pre-dotfiles-bak
 fi
-if [ -f ~/.config/wpg/wpg.conf ]; then
-  mv ~/.config/wpg/wpg.conf ~/.config/wpg/wpg.conf.pre-dotfiles-bak
-fi
-ln -fs ~/dotfiles-manjaro-i3/config/wpg/templates ~/.config/wpg/templates
-ln -fs ~/dotfiles-manjaro-i3/config/wpg/wpg.conf ~/.config/wpg/wpg.conf
 
 echo "i3 blocks"
 
