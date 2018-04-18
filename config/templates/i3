@@ -29,17 +29,7 @@ set $urgent-bg-color     "#<GTKTHEMEURGENT>"
 set $urgent-text-color   "#<GTKTHEMEFG2>"
 set $highlight-color     "#<GTKTHEMEHI>"
 
-# Solarised colours
-# set $bg-color            #0A323D
-# set $opaque-bg-color     argb:D8103C48
-# set $inactive-bg-color   #0A323D
-# set $text-color          #8E9C9D
-# set $inactive-text-color #687D86
-# set $urgent-bg-color     #32A19A
-# set $urgent-text-color   #0A323D
-# set $highlight-color     #2FD5D6
-
-# Manjaro colours
+# Original Manjaro colours
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
 #  client.focused          #556064 #556064 #80FFF9 #FDF6E3

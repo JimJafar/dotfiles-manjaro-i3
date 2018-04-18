@@ -27,12 +27,12 @@ while [ $SELECTEDCOLOURSCHEME == -1 ]; do
   printf "The following colour schemes are available:\n\n"
 
   for ((i=0; i < ${#COLOURSCHEMES[@]}; i++)); do
-    echo "${i+1} - ${COLOURSCHEMES[$i]/$COLOURSDIR/}"
+    echo "$i - ${COLOURSCHEMES[$i]/$COLOURSDIR/}"
   done
   printf "\nWhich colour scheme would you like? (just enter the number)... "
   read COLOURSCHEMENUMBER
-  [ $COLOURSCHEMENUMBER -ne 0 ] && [ ${COLOURSCHEMES[$COLOURSCHEMENUMBER-1]+exists} ] \
-    && SELECTEDCOLOURSCHEME="$COLOURSCHEMENUMBER-1" \
+  [ ${COLOURSCHEMES[$COLOURSCHEMENUMBER]+exists} ] \
+    && SELECTEDCOLOURSCHEME="$COLOURSCHEMENUMBER" \
     || printf "$FAIL_COLOUR\nInvalid selection\n\n$END_COLOUR"
 done
 

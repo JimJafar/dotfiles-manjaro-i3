@@ -2,7 +2,7 @@
 
 sink=0
 
-if [ "$(pacmd list-sinks | grep name: | tail -n 1 | grep FiiO)" ]; then
+if [ "$(pacmd list-sinks | grep name: | grep FiiO)" ]; then
     sink=1
 fi
 
