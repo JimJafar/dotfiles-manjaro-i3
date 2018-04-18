@@ -14,10 +14,10 @@ I use `scripts/dotfiles` to auto generate some config files using the colour sch
 
 Available color schemes:
 
-adapta
-arc-dark
-darcula
-solarized (dark)
+- adapta
+- arc-dark
+- darcula
+- solarized (dark)
 
 ---
 
