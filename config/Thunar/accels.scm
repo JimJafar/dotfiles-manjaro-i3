@@ -26,6 +26,7 @@
 ; (gtk_accel_path "<Actions>/ThunarActions/Tap::create-archive" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/view-as-compact-list" "<Primary>3")
 ; (gtk_accel_path "<Actions>/ThunarWindow/view-side-pane-tree" "<Primary>e")
+; (gtk_accel_path "<Actions>/ThunarActions/uca-action-1520867506029597-4" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/restore" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/open-network" "")
 ; (gtk_accel_path "<Actions>/ThunarBookmarks/2b758bc1dd1996713eefe74dd130b6ba" "")
