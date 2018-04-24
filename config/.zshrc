@@ -8,6 +8,9 @@ export GEM_HOME=$HOME/.gem
 # Path to your oh-my-zsh installation.
 export ZSH=/home/jim/.oh-my-zsh
 
+# Set nano as default editor
+export EDITOR=nano
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes

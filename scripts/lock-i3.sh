@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 #icon="$HOME/dotfiles-manjaro-i3/img/i3-lock-icon-deathnote.png"
 #icon="$HOME/dotfiles-manjaro-i3/img/i3-lock-icon-homestuck-crew.png"

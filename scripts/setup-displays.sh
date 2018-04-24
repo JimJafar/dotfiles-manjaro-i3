@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 #date > /home/jim/Documents/displ.log
 echo $(xrandr | grep -oP '(HDMI1\sconnected)')

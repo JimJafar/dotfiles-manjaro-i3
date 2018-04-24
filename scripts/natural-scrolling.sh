@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 # Set natural scrolling on trackpad
 TOUCHPADID=`xinput list|grep Touchpad|grep -m 1 id=|cut -f 2|cut -f 2 -d =`

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 FAIL_COLOUR=$'\033[31;1m'
 PASS_COLOUR=$'\033[32;1m'

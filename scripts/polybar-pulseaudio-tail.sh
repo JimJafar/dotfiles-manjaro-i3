@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 sink=0
 
