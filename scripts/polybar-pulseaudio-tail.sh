@@ -3,7 +3,7 @@
 sink=0
 
 if [ "$(pacmd list-sinks | grep name: | grep FiiO)" ]; then
-    sink=1
+    sink=$(pacmd list-sinks | grep index: | tail -n 1 | tr -d '[:space:]' | cut -d':' -f 2)
 fi
 
 volume_up() {
@@ -26,7 +26,7 @@ volume_print() {
     elif [ "$(pacmd list-sinks | grep active | head -n $((sink+1)) | grep speaker)" ]; then
         icon=""
     else
-        icon="?"
+        icon="?"
     fi
 
     muted=$(pamixer --sink $sink --get-mute)
