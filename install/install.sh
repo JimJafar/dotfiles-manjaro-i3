@@ -162,12 +162,6 @@ if [ -f ~/.i3status.conf ]; then
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/i3/i3status.conf ~/.i3status.conf
 
-echo "i3 lock"
-
-if [ ! -f ~/lock-i3.sh ]; then
-  ln -fs ~/dotfiles-manjaro-i3/scripts/lock-i3.sh ~/lock-i3.sh
-fi
-
 echo "gtk"
 
 if [ -f ~/.gtkrc-2.0.mine ]; then

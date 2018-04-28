@@ -16,6 +16,7 @@ TEMPLATES[gtk2]="$HOME/.themes/FlatColor/gtk-2.0/gtkrc"
 TEMPLATES[gtk3.0]="$HOME/.themes/FlatColor/gtk-3.0/gtk.css"
 TEMPLATES[gtk3.20]="$HOME/.themes/FlatColor/gtk-3.20/gtk.css"
 TEMPLATES[i3]="$HOME/.config/i3/config"
+TEMPLATES[lock-i3.sh]="$HOME/lock-i3.sh"
 TEMPLATES[polybar]="$HOME/.config/polybar/config"
 TEMPLATES[rofi]="$HOME/.config/rofi/config"
 TEMPLATES[rofi.theme]="$HOME/.config/rofi/themes/wpg.rasi"
@@ -62,5 +63,7 @@ for i in "${!TEMPLATES[@]}"; do
                   -e s/\<GTKTHEMEURGENTRGB\>/"$GTKTHEMEURGENTRGB"/g \
   | tee $OUT 1>/dev/null
 done
+
+chmod +x "$HOME/lock-i3.sh"
 
 printf "$PASS_COLOUR\n\nDONE$END_COLOUR\n"

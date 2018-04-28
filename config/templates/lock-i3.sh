@@ -4,16 +4,16 @@
 #icon="$HOME/dotfiles-manjaro-i3/img/i3-lock-icon-homestuck-crew.png"
 
 # colours
-bgcolor=404552FF
-ringcolor=383C4AFF
-opaquebgcolor=7C818CD8
-wrongcolor=A54242FF
+bgcolor=<GTKTHEMEBG1>FF
+ringcolor=<GTKTHEMEBG2>FF
+opaquebgcolor=<GTKTHEMEBG4>D8
+wrongcolor=<GTKTHEMEURGENT>FF
 wrongbgcolor="$bgcolor"
-inactivebgcolor=404552FF
-inactivetextcolor=C6CDD6FF
-urgentbgcolor=A54242FF
-urgenttextcolor=F8F8F8FF
-highlightcolor=5294E2FF
+inactivebgcolor=<GTKTHEMEBG1>FF
+inactivetextcolor=<GTKTHEMEFG1>FF
+urgentbgcolor=<GTKTHEMEURGENT>FF
+urgenttextcolor=<GTKTHEMEFG2>FF
+highlightcolor=<GTKTHEMEHI>FF
 verifyingbgcolor="$bgcolor"
 verifyingringcolor="$ringcolor"
 backspacecolor="$wrongcolor"
