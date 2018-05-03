@@ -72,7 +72,7 @@ tray-offset-x = 0
 tray-offset-y = 0
 
 ; Pad the sides of each tray icon
-tray-padding = 2
+tray-padding = 4
 
 ; Scale factor for tray clients
 tray-scale = 1.0
@@ -363,10 +363,10 @@ format-underline = ${colors.foreground}
 
 [module/date]
 type = internal/date
-interval = 5
+interval = 1
 
-date =
-date-alt = " %Y-%m-%d"
+date = " %a %e"
+date-alt = " %A %e %B %Y"
 
 time = %H:%M
 time-alt = %H:%M:%S
