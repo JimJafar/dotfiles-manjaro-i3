@@ -50,7 +50,7 @@ for_window [class="^.*"] border pixel 1
 new_window pixel 1
 
 # enable title bars for floating windows
-new_float normal 1
+# new_float normal 1
 
 # Hide borders
 # hide_edge_borders none

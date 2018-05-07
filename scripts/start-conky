@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
 # conky -c ~/.config/conky/conky_shortcuts_live_solarized &&
-conky -c ~/.config/conky/conky_solarized &&
+conky -c ~/.config/conky/conky &&
 
 exit 0

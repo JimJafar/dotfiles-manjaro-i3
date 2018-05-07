@@ -39,7 +39,10 @@ line-size = 3
 line-color = #f00
 
 border-size = 0
-border-color = #00000000
+; border-top-size = 0
+border-bottom-size = 2
+; border-color = #00000000 ; transparent
+border-color = ${colors.background}
 
 padding-left = 0
 padding-right = 2
@@ -146,7 +149,7 @@ label-mode-background = ${colors.primary}
 ;   %index%
 ;   %output%
 ; Default: %icon%  %name%
-label-focused = %icon% %name%
+label-focused = %icon%
 label-focused-background = ${colors.background-alt}
 label-focused-foreground = ${colors.alert}
 label-focused-underline = ${colors.alert}
@@ -158,7 +161,7 @@ label-focused-padding = 2
 ;   %icon%
 ;   %index%
 ; Default: %icon%  %name%
-label-unfocused = %icon% %name%
+label-unfocused = %icon%
 label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
@@ -167,7 +170,7 @@ label-unfocused-padding = 2
 ;   %icon%
 ;   %index%
 ; Default: %icon%  %name%
-label-visible = %icon% %name%
+label-visible = %icon%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}

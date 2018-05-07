@@ -9,7 +9,6 @@ TEMPLATEDIR="${DIR/scripts/config\/templates\/}"
 COLOURSDIR="${DIR/scripts/config\/color-schemes\/}"
 
 declare -A TEMPLATES
-TEMPLATES[conky]="$HOME/.config/conky/conky_wpg"
 TEMPLATES[termite]="$HOME/.config/termite/config"
 TEMPLATES[dunst]="$HOME/.config/dunst/dunstrc"
 TEMPLATES[gtk2]="$HOME/.themes/FlatColor/gtk-2.0/gtkrc"
@@ -23,6 +22,9 @@ TEMPLATES[rofi.theme]="$HOME/.config/rofi/themes/wpg.rasi"
 
 COLOURSCHEMES=($COLOURSDIR*)
 SELECTEDCOLOURSCHEME=-1
+CONKY_STYLE=-1
+
+# Which colour scheme?
 
 while [ $SELECTEDCOLOURSCHEME == -1 ]; do
   printf "The following colour schemes are available:\n\n"
@@ -36,6 +38,20 @@ while [ $SELECTEDCOLOURSCHEME == -1 ]; do
     && SELECTEDCOLOURSCHEME="$COLOURSCHEMENUMBER" \
     || printf "$FAIL_COLOUR\nInvalid selection\n\n$END_COLOUR"
 done
+
+# Which Conky style?
+
+while [ $CONKY_STYLE != 'l' ] && [ $CONKY_STYLE != 'd' ]; do
+  printf "\nWould you like a (l)ight or a (d)ark conky?"
+  read CONKY_STYLE
+  if [ $CONKY_STYLE != 'l' ] && [ $CONKY_STYLE != 'd' ]; then
+    printf "$FAIL_COLOUR\nInvalid selection - please enter l or d\n\n$END_COLOUR"
+  fi
+done
+
+TEMPLATES["conky_$CONKY_STYLE"]="$HOME/.config/conky/conky"
+
+# Parse and generate
 
 printf "\n\nParsing ${COLOURSCHEMES[$SELECTEDCOLOURSCHEME]}...\n\n"
 
