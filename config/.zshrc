@@ -107,12 +107,15 @@ export NVM_DIR="$HOME/.nvm"
 
 MXDIR=~/Documents/code/maritimexchange/
 MXBDIR=~/Documents/code/maritimexchange-backend/
+MXADIR=~/Documents/code/maritimexchange-analytics/
 
 alias dotfiles="~/dotfiles-manjaro-i3/scripts/dotfiles"
 alias cdmxb="cd $MXBDIR"
+alias cdmxa="cd $MXBDIR"
 alias cdmx="cd $MXDIR"
 # alias mx="terminator --layout mx"
 alias mx="cd $MXBDIR && npm start & termite --hold -e \"zsh -c 'cd $MXDIR && npm start'\""
+alias mxa="cd "$MXADIR/python/mx" && . ../../venv/bin/activate && python ./api.py"
 alias c="tput reset"
 alias disconnectWiFi="nmcli d disconnect wlp2s0"
 alias screenSingle1080="sh ~/.screenlayout/single-1080.sh"

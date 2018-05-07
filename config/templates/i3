@@ -26,7 +26,7 @@ set $inactive-bg-color   "#<GTKTHEMEBG1>"
 set $text-color          "#<GTKTHEMEFG2>"
 set $inactive-text-color "#<GTKTHEMEFG1>"
 set $urgent-bg-color     "#<GTKTHEMEURGENT>"
-set $urgent-text-color   "#<GTKTHEMEFG2>"
+set $urgent-text-color   "#<GTKTHEMEBG1>"
 set $highlight-color     "#<GTKTHEMEHI>"
 
 # Original Manjaro colours
