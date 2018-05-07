@@ -42,7 +42,7 @@ done
 # Which Conky style?
 
 while [ $CONKY_STYLE != 'l' ] && [ $CONKY_STYLE != 'd' ]; do
-  printf "\nWould you like a (l)ight or a (d)ark conky?"
+  printf "\nWould you like a (l)ight or a (d)ark conky?   "
   read CONKY_STYLE
   if [ $CONKY_STYLE != 'l' ] && [ $CONKY_STYLE != 'd' ]; then
     printf "$FAIL_COLOUR\nInvalid selection - please enter l or d\n\n$END_COLOUR"
