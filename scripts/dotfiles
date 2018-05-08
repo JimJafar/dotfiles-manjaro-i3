@@ -19,6 +19,8 @@ TEMPLATES[lock-i3.sh]="$HOME/lock-i3.sh"
 TEMPLATES[polybar]="$HOME/.config/polybar/config"
 TEMPLATES[rofi]="$HOME/.config/rofi/config"
 TEMPLATES[rofi.theme]="$HOME/.config/rofi/themes/wpg.rasi"
+TEMPLATES[gtk-3.0-settings.ini]="$HOME/.config/gtk-3.0/settings.ini"
+TEMPLATES[gtkrc-2.0]="$HOME/.gtkrc-2.0"
 
 COLOURSCHEMES=($COLOURSDIR*)
 SELECTEDCOLOURSCHEME=-1
@@ -39,6 +41,8 @@ while [ $SELECTEDCOLOURSCHEME == -1 ]; do
     || printf "$FAIL_COLOUR\nInvalid selection\n\n$END_COLOUR"
 done
 
+GTKTHEMENAME="${COLOURSCHEMES[$SELECTEDCOLOURSCHEME]/$COLOURSDIR/}"
+
 # Which Conky style?
 
 while [ $CONKY_STYLE != 'l' ] && [ $CONKY_STYLE != 'd' ]; do
@@ -55,13 +59,14 @@ TEMPLATES["conky_$CONKY_STYLE"]="$HOME/.config/conky/conky"
 
 printf "\n\nParsing ${COLOURSCHEMES[$SELECTEDCOLOURSCHEME]}...\n\n"
 
-eval source ${COLOURSCHEMES[$SELECTEDCOLOURSCHEME]}
+eval source $(printf %q "${COLOURSCHEMES[$SELECTEDCOLOURSCHEME]}")
 
 for i in "${!TEMPLATES[@]}"; do
   FILE="$TEMPLATEDIR$i"
   OUT="${TEMPLATES[$i]}"
   printf "Generating $OUT\n"
-  cat $FILE | sed -e s/\<GTKTHEMEBG1\>/$GTKTHEMEBG1/g \
+  cat $FILE | sed -e s/\<GTKTHEMENAME\>/"$GTKTHEMENAME"/g \
+                  -e s/\<GTKTHEMEBG1\>/$GTKTHEMEBG1/g \
                   -e s/\<GTKTHEMEBG2\>/$GTKTHEMEBG2/g \
                   -e s/\<GTKTHEMEBG3\>/$GTKTHEMEBG3/g \
                   -e s/\<GTKTHEMEBG4\>/$GTKTHEMEBG4/g \
@@ -79,6 +84,9 @@ for i in "${!TEMPLATES[@]}"; do
                   -e s/\<GTKTHEMEURGENTRGB\>/"$GTKTHEMEURGENTRGB"/g \
   | tee $OUT 1>/dev/null
 done
+
+gsettings set org.gnome.desktop.interface gtk-theme "$GTKTHEMENAME"
+gsettings set org.gnome.desktop.wm.preferences theme "$GTKTHEMENAME"
 
 chmod +x "$HOME/lock-i3.sh"
 

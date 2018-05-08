@@ -167,7 +167,6 @@ echo "gtk"
 if [ -f ~/.gtkrc-2.0.mine ]; then
   mv ~/.gtkrc-2.0.mine ~/.gtkrc-2.0.mine.pre-dotfiles-bak
 fi
-ln -fs ~/dotfiles-manjaro-i3/config/.gtkrc-2.0.mine ~/.gtkrc-2.0.mine
 
 if [ -f ~/.config/gtk-3.0/settings.ini ]; then
   mv ~/.config/gtk-3.0/settings.ini ~/.config/gtk-3.0/settings.ini.pre-dotfiles-bak
@@ -175,7 +174,6 @@ fi
 if [ -f ~/.config/gtk-3.0/gtk.css ]; then
   mv ~/.config/gtk-3.0/gtk.css ~/.config/gtk-3.0/gtk.css.pre-dotfiles-bak
 fi
-ln -fs ~/dotfiles-manjaro-i3/config/gtk-3.0/settings.ini ~/.config/gtk-3.0/
 ln -fs ~/dotfiles-manjaro-i3/config/gtk-3.0/gtk.css ~/.config/gtk-3.0/
 
 echo "screen layouts"

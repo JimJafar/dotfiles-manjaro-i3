@@ -115,7 +115,6 @@ echo "i3 stuff"
 sudo pacman -S --noconfirm compton
 sudo pacman -S --noconfirm rofi
 sudo pacman -S --noconfirm arandr
-sudo pacman -S --noconfirm lxappearance
 sudo pacman -S --noconfirm xorg-xbacklight
 
 echo "polybar"
@@ -174,6 +173,9 @@ echo "GTK themes"
 sudo pacman -S --noconfirm adapta-gtk-theme
 sudo pacman -S --noconfirm arc-gtk-theme
 yaourt -S --noconfirm paper-gtk-theme-git
+yaourt -S --noconfirm paper-icon-theme-git
+yaourt -S --noconfirm aur/gtk-theme-numix-solarized
+yaourt -S --noconfirm pop-gtk-theme
 
 echo "removing palemoon"
 sudo pacman -Rs --noconfirm palemoon-bin
