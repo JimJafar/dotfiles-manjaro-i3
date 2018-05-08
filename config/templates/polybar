@@ -262,24 +262,6 @@ label-unmounted-foreground = ${colors.foreground-alt}
 
 format-mounted-underline = ${colors.foreground}
 
-[module/xbacklight]
-type = internal/xbacklight
-
-format = <label> <bar>
-label = 
-format-underline = ${colors.secondary}
-
-bar-width = 10
-bar-indicator =
-bar-indicator-foreground = #ff
-bar-indicator-font = 2
-bar-fill = ─
-bar-fill-font = 2
-bar-fill-foreground = #9f78e1
-bar-empty = ─
-bar-empty-font = 2
-bar-empty-foreground = ${colors.foreground-alt}
-
 [module/backlight-acpi]
 inherit = module/xbacklight
 type = internal/backlight
@@ -364,6 +346,24 @@ interval = 2
 
 format-underline = ${colors.foreground}
 
+[module/xbacklight]
+type = internal/xbacklight
+
+format = <label> <bar>
+label = 
+format-underline = ${colors.alert}
+
+bar-width = 10
+bar-indicator =
+bar-indicator-foreground = #ff
+bar-indicator-font = 2
+bar-fill = ─
+bar-fill-font = 2
+bar-fill-foreground = #9f78e1
+bar-empty = ─
+bar-empty-font = 2
+bar-empty-foreground = ${colors.foreground-alt}
+
 [module/date]
 type = internal/date
 interval = 1
@@ -377,7 +377,7 @@ time-alt = %H:%M:%S
 format-prefix = 
 ; format-prefix-foreground = ${colors.foreground-alt}
 format-underline = ${colors.alert}
-format-foreground = ${colors.alert}
+format-foreground = ${colors.secondary}
 
 label = %date% %time%
 
@@ -393,7 +393,7 @@ scroll-down = ~/dotfiles-manjaro-i3/scripts/polybar-pulseaudio-tail.sh --up
 label = %output%
 
 format-underline = ${colors.alert}
-format-foreground = ${colors.alert}
+format-foreground = ${colors.secondary}
 
 [module/battery]
 type = internal/battery
@@ -508,11 +508,11 @@ format-spacing = 1
 menu-foreground = ${colors.alert}
 
 label-open = 
-label-open-foreground = ${colors.alert}
+label-open-foreground = ${colors.secondary}
 label-open-underline = ${colors.alert}
 label-open-padding = 1
 label-close =  cancel
-label-close-foreground = ${colors.alert}
+label-close-foreground = ${colors.secondary}
 label-close-underline = ${colors.alert}
 label-close-padding = 1
 label-separator = |
