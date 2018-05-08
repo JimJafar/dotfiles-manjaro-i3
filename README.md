@@ -25,17 +25,23 @@ Available color schemes:
 
 Usual disclaimer - I hope this helps you but please be careful, make sure you know what you're doing, and don't blindly run the scripts :)
 
+### pop
+
 ![screenshot](https://i.imgur.com/3uqW9HV.jpg)
 
 ![screenshot](https://i.imgur.com/jTApleo.jpg)
 
 ![screenshot](https://i.imgur.com/yZGqFmz.jpg)
 
+### solarized
+
 ![screenshot](https://i.imgur.com/aVuZ2xV.jpg)
 
 ![screenshot](https://i.imgur.com/UfxuuO9.jpg)
 
 ![screenshot](https://i.imgur.com/sGu6AX4.jpg)
+
+### arc dark
 
 ![screenshot](https://i.imgur.com/BaqKDDv.jpg)
 
