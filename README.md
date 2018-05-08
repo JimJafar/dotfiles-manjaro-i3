@@ -23,22 +23,22 @@ Available color schemes:
 
 Usual disclaimer - I hope this helps you but please be careful, make sure you know what you're doing, and don't blindly run the scripts :)
 
-![screenshot](https://imgur.com/BaqKDDv)
+![screenshot](https://i.imgur.com/BaqKDDv.jpg)
 
-![screenshot](https://imgur.com/4smD6Kt)
+![screenshot](https://i.imgur.com/4smD6Kt.jpg)
 
-![screenshot](https://imgur.com/U8Sfd3h)
+![screenshot](https://i.imgur.com/U8Sfd3h.jpg)
 
-![screenshot](https://imgur.com/3uqW9HV)
+![screenshot](https://i.imgur.com/3uqW9HV.jpg)
 
-![screenshot](https://imgur.com/jTApleo)
+![screenshot](https://i.imgur.com/jTApleo.jpg)
 
-![screenshot](https://imgur.com/yZGqFmz)
+![screenshot](https://i.imgur.com/yZGqFmz.jpg)
 
-![screenshot](https://imgur.com/aVuZ2xV)
+![screenshot](https://i.imgur.com/aVuZ2xV.jpg)
 
-![screenshot](https://imgur.com/UfxuuO9)
+![screenshot](https://i.imgur.com/UfxuuO9.jpg)
 
-![screenshot](https://imgur.com/sGu6AX4)
+![screenshot](https://i.imgur.com/sGu6AX4.jpg)
 
 This project is licensed under the terms of the MIT license.
