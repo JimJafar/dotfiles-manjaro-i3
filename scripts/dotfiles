@@ -10,8 +10,8 @@ COLOURSDIR="${DIR/scripts/config\/color-schemes\/}"
 
 declare -A TEMPLATES
 TEMPLATES[termite]="$HOME/.config/termite/config"
-TEMPLATES[dunst]="$HOME/.config/dunst/dunstrc"
-TEMPLATES[gtk2]="$HOME/.themes/FlatColor/gtk-2.0/gtkrc"
+TEMPLATES[dunstrc]="$HOME/.config/dunst/dunstrc"
+TEMPLATES[gtk2.0]="$HOME/.themes/FlatColor/gtk-2.0/gtkrc"
 TEMPLATES[gtk3.0]="$HOME/.themes/FlatColor/gtk-3.0/gtk.css"
 TEMPLATES[gtk3.20]="$HOME/.themes/FlatColor/gtk-3.20/gtk.css"
 TEMPLATES[i3]="$HOME/.config/i3/config"
@@ -89,5 +89,9 @@ gsettings set org.gnome.desktop.interface gtk-theme "$GTKTHEMENAME"
 gsettings set org.gnome.desktop.wm.preferences theme "$GTKTHEMENAME"
 
 chmod +x "$HOME/lock-i3.sh"
+
+printf "Restarting i3..."
+
+i3-msg restart
 
 printf "$PASS_COLOUR\n\nDONE$END_COLOUR\n"

@@ -102,13 +102,6 @@ if [ -f ~/.config/clipit/clipitrc ]; then
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/clipitrc ~/.config/clipit/clipitrc
 
-echo "Conky"
-
-if [ -d ~/.config/conky ]; then
-  mv ~/.config/conky ~/.config/conky.pre-dotfiles-bak
-fi
-ln -fs  ~/dotfiles-manjaro-i3/config/conky ~/.config/
-
 echo "Ranger"
 
 if [ ! -d ~/.config/ranger ]; then

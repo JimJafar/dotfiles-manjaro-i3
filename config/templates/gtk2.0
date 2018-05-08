@@ -1,5 +1,3 @@
-#modded Numix gtkrc
-
 gtk-color-scheme = "bg_color:#<GTKTHEMEBG2>
 # color0:#<COLOR0>
 # color1:#<COLOR1>
