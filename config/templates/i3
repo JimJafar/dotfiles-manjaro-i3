@@ -421,12 +421,12 @@ bindsym $mod+Ctrl+Shift+4 exec --no-startup-id sh ~/.screenlayout/single-hdmi-10
 
 # applets
 
-exec_always --no-startup-id killall nm-applet && nm-applet
-exec_always --no-startup-id killall blueman-applet && blueman-applet
-exec_always --no-startup-id sleep 10; killall kdeconnect-indicator && /usr/bin/kdeconnect-indicator
-exec_always --no-startup-id killall pamac-tray && pamac-tray
-exec_always --no-startup-id killall clipit && clipit
-exec_always --no-startup-id killall redshift-gtk && redshift-gtk -c "$HOME/.config/redshift.conf"
+exec_always --no-startup-id killall nm-applet; nm-applet
+exec_always --no-startup-id killall blueman-applet; blueman-applet
+exec_always --no-startup-id killall pamac-tray; pamac-tray
+exec_always --no-startup-id killall clipit; clipit
+exec_always --no-startup-id killall redshift-gtk; redshift-gtk -c "$HOME/.config/redshift.conf"
+exec_always --no-startup-id sleep 10; killall kdeconnect-indicator; /usr/bin/kdeconnect-indicator
 
 # persistent daemons
 
