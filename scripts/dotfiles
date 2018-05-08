@@ -21,6 +21,7 @@ TEMPLATES[rofi]="$HOME/.config/rofi/config"
 TEMPLATES[rofi.theme]="$HOME/.config/rofi/themes/wpg.rasi"
 TEMPLATES[gtk-3.0-settings.ini]="$HOME/.config/gtk-3.0/settings.ini"
 TEMPLATES[gtkrc-2.0]="$HOME/.gtkrc-2.0"
+TEMPLATES[atom-config.cson]="$HOME/.atom/config.cson"
 
 COLOURSCHEMES=($COLOURSDIR*)
 SELECTEDCOLOURSCHEME=-1
@@ -82,6 +83,8 @@ for i in "${!TEMPLATES[@]}"; do
                   -e s/\<GTKTHEMEFG2RGB\>/"$GTKTHEMEFG2RGB"/g \
                   -e s/\<GTKTHEMEHIRGB\>/"$GTKTHEMEHIRGB"/g \
                   -e s/\<GTKTHEMEURGENTRGB\>/"$GTKTHEMEURGENTRGB"/g \
+                  -e s/\<ATOMUITHEME\>/"$ATOMUITHEME"/g \
+                  -e s/\<ATOMSYNTAXTHEME\>/"$ATOMSYNTAXTHEME"/g \
   | tee $OUT 1>/dev/null
 done
 

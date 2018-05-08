@@ -30,7 +30,7 @@ ${goto 40}$color2${top name 3}$alignr$color${top cpu 3}%
 ${goto 40}$color2${top name 4}$alignr$color${top cpu 4}%
 # ${goto 40}$color2${top name 5}$alignr$color${top cpu 5}%
 #
-${voffset 10}${goto 40}${color}RAM${font Bitstream Vera Sans:bold:size=8}$alignr$mem$font
+${voffset 10}${goto 40}${color}RAM${font Bitstream Vera Sans:bold:size=8}$alignr$mem/ $memmax$font
 ${goto 40}${voffset 5}$color2${top_mem name 1}$alignr$color${top_mem mem_res 1}
 ${goto 40}$color2${top_mem name 2}$alignr$color${top_mem mem_res 2}
 ${goto 40}$color2${top_mem name 3}$alignr$color${top_mem mem_res 3}
