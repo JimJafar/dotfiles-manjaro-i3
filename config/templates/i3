@@ -441,7 +441,7 @@ exec --no-startup-id dropbox
 exec_always --no-startup-id "sh $HOME/dotfiles-manjaro-i3/scripts/trackpad-setup.sh"
 exec --no-startup-id "ruby $HOME/dotfiles-manjaro-i3/scripts/i3-floating-titles.rb"
 exec --no-startup-id xautolock -time 3 -locker ~/lock-i3.sh
-exec --no-startup-id "$HOME/dotfiles-manjaro-i3/scripts/start-conky"
+exec_always --no-startup-id "$HOME/dotfiles-manjaro-i3/scripts/start-conky"
 exec_always --no-startup-id nitrogen --restore; sleep 1; compton -b
 
 # Manjaro stuff

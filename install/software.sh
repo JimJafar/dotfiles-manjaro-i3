@@ -169,6 +169,9 @@ sudo chmod a+rx /usr/local/bin/youtube-dl
 echo "Microsoft OneDrive"
 yaourt -S --noconfirm onedrive-git
 
+echo "xclip"
+sudo pacman -S --noconfirm xclip
+
 echo "GTK themes"
 sudo pacman -S --noconfirm adapta-gtk-theme
 sudo pacman -S --noconfirm arc-gtk-theme

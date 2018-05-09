@@ -1,3 +1,4 @@
+/* Borrowed and adapted from WPGTK */
 
 /* Default color scheme */
 @define-color bg_color #<GTKTHEMEBG1>;

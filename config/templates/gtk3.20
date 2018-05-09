@@ -1,23 +1,6 @@
+/* Borrowed and adapted from WPGTK */
 
 /* Default color scheme */
-/*
-@define-color color0 #<COLOR0>;
-@define-color color1 #<COLOR1>;
-@define-color color2 #<COLOR2>;
-@define-color color3 #<COLOR3>;
-@define-color color4 #<COLOR4>;
-@define-color color5 #<COLOR5>;
-@define-color color6 #<COLOR6>;
-@define-color color7 #<COLOR7>;
-@define-color color8 #<COLOR8>;
-@define-color color9 #<COLOR9>;
-@define-color color10 #<COLOR10>;
-@define-color color11 #<COLOR11>;
-@define-color color12 #<COLOR12>;
-@define-color color13 #<COLOR13>;
-@define-color color14 #<COLOR14>;
-@define-color color15 #<COLOR15>;
-*/
 @define-color selected_bg_color #<COLORHI>;
 @define-color bg_color #<GTKTHEMEBG1>;
 @define-color tooltip_bg_color shade(#<GTKTHEMEBG3>, 1.20);
