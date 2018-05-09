@@ -434,6 +434,7 @@ exec --no-startup-id xfce4-power-manager
 exec --no-startup-id /usr/lib/kdeconnectd
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id dropbox
+exec --no-startup-id eval `ssh-agent -s`
 # exec_always --no-startup-id sbxkb
 
 # configuration
