@@ -20,3 +20,5 @@ GTKTHEMEURGENTRGB="211, 54, 130"
 
 ATOMUITHEME="solarized-dark-ui"
 ATOMSYNTAXTHEME="solarized-dark-syntax"
+
+GLOBALDARKTHEME=1

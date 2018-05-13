@@ -11,9 +11,9 @@ COLOURSDIR="${DIR/scripts/config\/color-schemes\/}"
 declare -A TEMPLATES
 TEMPLATES[termite]="$HOME/.config/termite/config"
 TEMPLATES[dunstrc]="$HOME/.config/dunst/dunstrc"
-TEMPLATES[gtk2.0]="$HOME/.themes/FlatColor/gtk-2.0/gtkrc"
-TEMPLATES[gtk3.0]="$HOME/.themes/FlatColor/gtk-3.0/gtk.css"
-TEMPLATES[gtk3.20]="$HOME/.themes/FlatColor/gtk-3.20/gtk.css"
+TEMPLATES[gtk2.0]="/usr/share/themes/FlatColor/gtk-2.0/gtkrc"
+TEMPLATES[gtk3.0]="/usr/share/themes/FlatColor/gtk-3.0/gtk.css"
+TEMPLATES[gtk3.20]="/usr/share/themes/FlatColor/gtk-3.20/gtk.css"
 TEMPLATES[i3]="$HOME/.config/i3/config"
 TEMPLATES[lock-i3.sh]="$HOME/lock-i3.sh"
 TEMPLATES[polybar]="$HOME/.config/polybar/config"
@@ -42,7 +42,13 @@ while [ $SELECTEDCOLOURSCHEME == -1 ]; do
     || printf "$FAIL_COLOUR\nInvalid selection\n\n$END_COLOUR"
 done
 
+# Set theme name
+
 GTKTHEMENAME="${COLOURSCHEMES[$SELECTEDCOLOURSCHEME]/$COLOURSDIR/}"
+
+if [ ! -d "/usr/share/themes/${GTKTHEMENAME}" ] & [ ! -d "~/.themes/${GTKTHEMENAME}" ]; then
+  GTKTHEMENAME="FlatColor"
+fi
 
 # Which Conky style?
 
@@ -85,7 +91,8 @@ for i in "${!TEMPLATES[@]}"; do
                   -e s/\<GTKTHEMEURGENTRGB\>/"$GTKTHEMEURGENTRGB"/g \
                   -e s/\<ATOMUITHEME\>/"$ATOMUITHEME"/g \
                   -e s/\<ATOMSYNTAXTHEME\>/"$ATOMSYNTAXTHEME"/g \
-  | tee $OUT 1>/dev/null
+                  -e s/\<GLOBALDARKTHEME\>/"$GLOBALDARKTHEME"/g \
+  | sudo tee $OUT 1>/dev/null
 done
 
 gsettings set org.gnome.desktop.interface gtk-theme "$GTKTHEMENAME"

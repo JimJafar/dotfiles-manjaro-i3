@@ -83,6 +83,16 @@ if [ -d ~/.config/Thunar ]; then
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/Thunar ~/.config/
 
+echo "nano"
+
+if [ ! -d ~/.config/nano ]; then
+  mkdir ~/.config/nano
+fi
+if [ -f ~/.config/nano/nanorc ]; then
+  mv ~/.config/nano/nanorc ~/.config/nano/nanorc.pre-dotfiles-bak
+fi
+ln -fs ~/dotfiles-manjaro-i3/config/nano/nanorc ~/.config/nano/nanorc
+
 echo "Dunst (notifications)"
 
 if [ ! -d ~/.config/dunst ]; then

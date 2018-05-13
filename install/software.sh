@@ -99,6 +99,10 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 git clone https://github.com/denysdovhan/spaceship-prompt.git ~/.oh-my-zsh/custom/themes/spaceship-prompt
 ln -s ~/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme
 
+echo "nano syntax highlighting"
+git clone https://github.com/scopatz/nanorc.git /tmp/nanotemp
+mv /tmp/nanotemp/*.nanorc /usr/share/nano/
+
 echo "FontAwesome"
 # sudo pacman -S --noconfirm ttf-font-awesome
 echo "Use fontawesome 4 so spaces around fonts don't render as glyphs"
