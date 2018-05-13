@@ -103,7 +103,7 @@ bindsym Print exec screenshot
 bindsym $mod+Ctrl+b exec termite -e 'bmenu'
 bindsym $mod+F2 exec palemoon
 # bindsym $mod+F3 exec ranger
-bindsym $mod+Ctrl+e exec thunar
+bindsym $mod+Ctrl+e exec caja
 bindsym $mod+Ctrl+Shift+e exec gksu thunar
 bindsym $mod+F5 exec termite -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton

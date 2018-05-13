@@ -21,6 +21,9 @@ sudo pacman -S --noconfirm tumbler
 sudo pacman -S --noconfirm ffmpegthumbnailer
 sudo pacman -S --noconfirm raw-thumbnailer
 
+echo "Caja"
+sudo pacman -S --noconfirm caja
+
 echo "powerline fonts"
 sudo pacman -S --noconfirm powerline-fonts
 
