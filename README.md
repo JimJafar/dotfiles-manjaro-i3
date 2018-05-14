@@ -12,7 +12,7 @@ My personal dotfiles for Manjaro i3 edition.
 
 I use `scripts/dotfiles` to auto generate some config files using the colour schemes in `config/color-schemes` and the templates in `config/templates`. The generated dotfiles will set your GTK theme, Atom themes, and appropriate colours for i3, rofi, polybar, termite etc.
 
-Just run the `dofiles` command to apply a colour scheme on the fly. i3 etc. will be updated on the fly, but you will need to restart any open applications to see the changes.
+Just run the `dotfiles` command to apply a colour scheme... i3 etc. will be updated on the fly, but you will need to restart any open applications to see the changes.
 
 Available color schemes:
 
