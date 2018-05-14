@@ -12,10 +12,6 @@ echo "bluetooth"
 sudo pacman -S --noconfirm pulseaudio-bluetooth
 sudo pacman -S --noconfirm bluez-utils # installs bluetoothctl
 
-echo "Thunar"
-sudo pacman -S --noconfirm thunar
-sudo pacman -S --noconfirm thunar-archive-plugin
-sudo pacman -S --noconfirm thunar-media-tags-plugin
 # thumbnails
 sudo pacman -S --noconfirm tumbler
 sudo pacman -S --noconfirm ffmpegthumbnailer

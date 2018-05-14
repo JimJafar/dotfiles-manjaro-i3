@@ -36,6 +36,18 @@ if [ -d ~/.config/dconf/user.d ]; then
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/dconf/user.d ~/.config/dconf
 
+echo "ssh-agent"
+
+if [ ! -d ~/.config/systemd/user ]; then
+  mkdir -p ~/.config/systemd/user
+fi
+
+if [ -f ~/.config/systemd/user/ssh-agent.service ]; then
+  mv ~/.config/systemd/user/ssh-agent.service ~/.config/systemd/user/ssh-agent.service.pre-dotfiles-bak
+fi
+ln -fs ~/dotfiles-manjaro-i3/config/systemd/user/ssh-agent.service ~/.config/systemd/user/ssh-agent.service
+systemctl --user enable ssh-agent.service
+
 echo "motd"
 
 if [ -d ~/.motd.d ]; then
@@ -75,13 +87,6 @@ echo "rofi themes"
 if [ ! -d ~/.config/rofi ]; then
   mkdir ~/.config/rofi
 fi
-
-echo "Thunar"
-
-if [ -d ~/.config/Thunar ]; then
-  mv ~/.config/Thunar ~/.config/Thunar.pre-dotfiles-bak
-fi
-ln -fs ~/dotfiles-manjaro-i3/config/Thunar ~/.config/
 
 echo "nano"
 
