@@ -11,6 +11,10 @@ export ZSH=/home/jim/.oh-my-zsh
 # Set nano as default editor
 export EDITOR=nano
 
+# ssh-agent - https://eklitzke.org/using-ssh-agent-and-ed25519-keys-on-gnome
+eval $(systemctl --user show-environment | grep SSH_AUTH_SOCK)
+export SSH_AUTH_SOCK
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
