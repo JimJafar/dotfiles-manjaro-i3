@@ -186,6 +186,7 @@ yaourt -S --noconfirm paper-gtk-theme-git
 yaourt -S --noconfirm paper-icon-theme-git
 yaourt -S --noconfirm aur/gtk-theme-numix-solarized
 yaourt -S --noconfirm pop-gtk-theme
+yaourt -S --noconfirm gtk-theme-flat-color-git
 
 echo "removing palemoon"
 sudo pacman -Rs --noconfirm palemoon-bin
