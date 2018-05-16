@@ -277,7 +277,6 @@ for_window [class="Xfburn"] floating enable
 for_window [class="Gpick"] floating enable
 for_window [class="Shutter"] floating enable
 for_window [class="Epdfview"] floating enable
-for_window [class="Com.github.nick92.coffee"] floating enable
 
 # default workspaces
 assign [class="Google-chrome"] $workspace1
@@ -452,12 +451,15 @@ exec_always --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
+# layouts
+exec --no-startup-id "i3-msg 'workspace 1; append_layout $HOME/dotfiles-manjaro-i3/config/i3/layouts/workspace-1.json'"
+
 # Applications
-exec --no-startup-id spotify
 exec --no-startup-id google-chrome-stable
+exec --no-startup-id coffee
+exec --no-startup-id spotify
 exec --no-startup-id geary
 exec --no-startup-id franz
-exec --no-startup-id coffee
 
 #############################
 ### settings for i3-gaps: ###
