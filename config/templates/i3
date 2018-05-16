@@ -277,6 +277,7 @@ for_window [class="Xfburn"] floating enable
 for_window [class="Gpick"] floating enable
 for_window [class="Shutter"] floating enable
 for_window [class="Epdfview"] floating enable
+for_window [class="Com.github.nick92.coffee"] floating enable
 
 # default workspaces
 assign [class="Google-chrome"] $workspace1
@@ -456,6 +457,7 @@ exec --no-startup-id spotify
 exec --no-startup-id google-chrome-stable
 exec --no-startup-id geary
 exec --no-startup-id franz
+exec --no-startup-id coffee
 
 #############################
 ### settings for i3-gaps: ###

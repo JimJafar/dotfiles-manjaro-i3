@@ -1,6 +1,7 @@
 # IDEs and editors
 .idea
 *.iml
+.vscode
 
 # package managers
 node_modules
