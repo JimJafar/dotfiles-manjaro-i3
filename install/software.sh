@@ -175,9 +175,6 @@ yaourt -S --noconfirm onedrive-git
 echo "xclip"
 sudo pacman -S --noconfirm xclip
 
-echo "Coffee"
-yaourt -Ss --noconfirm coffee-git
-
 echo "GTK themes"
 sudo pacman -S --noconfirm adapta-gtk-theme
 sudo pacman -S --noconfirm arc-gtk-theme
