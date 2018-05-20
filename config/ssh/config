@@ -1,0 +1,5 @@
+IdentityFile ~/.ssh/id_rsa
+
+Host aur.archlinux.org
+  IdentityFile ~/.ssh/aur
+  User jim

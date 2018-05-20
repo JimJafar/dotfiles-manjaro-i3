@@ -6,6 +6,13 @@ echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
 echo "- STARTING CONFIG SETUP                                       -"
 echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
 
+echo "ssh config"
+
+if [ -f ~/.ssh/config ]; then
+  mv ~/.ssh/config ~/.ssh/config-pre-dotfiles-bak
+fi
+ln -fs ~/dotfiles-manjaro-i3/config/ssh/config ~/.ssh/config
+
 echo "git config"
 
 if [ -f ~/.gitconfig ]; then
