@@ -54,11 +54,8 @@ yaourt -S --noconfirm google-chrome
 echo "Firefox"
 sudo pacman -S --noconfirm firefox
 
-#echo "mailspring"
-#yaourt -S --noconfirm mailspring
-
-echo "geary"
-sudo pacman -S --noconfirm geary
+echo "mailspring"
+yaourt -S --noconfirm mailspring
 
 echo "Franz"
 yaourt -S --noconfirm franz

@@ -283,7 +283,7 @@ assign [class="Google-chrome"] $workspace1
 assign [class="Firefox"] $workspace1
 assign [class="Skype"] $workspace8
 assign [class="Google-chrome" title="WhatsApp"] $workspace8
-assign [class="Geary"] $workspace9
+assign [class="Mailspring"] $workspace9
 assign [class="Spotify"] $workspace10
 # Spotify doesn't play nice
 for_window [class="Spotify"] move to workspace $workspace10
@@ -457,7 +457,7 @@ exec_always --no-startup-id fix_xcursor
 # Applications
 exec --no-startup-id google-chrome-stable
 exec --no-startup-id spotify
-exec --no-startup-id geary
+exec --no-startup-id mailspring
 exec --no-startup-id franz
 
 #############################
