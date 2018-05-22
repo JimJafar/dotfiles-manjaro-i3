@@ -1,5 +1,11 @@
-IdentityFile ~/.ssh/id_rsa
+Host github.com
+  User JimSangwine
+  IdentityFile ~/.ssh/id_rsa
+
+Host bitbucket.com
+  User jim@sangwine.net
+  IdentityFile ~/.ssh/id_rsa
 
 Host aur.archlinux.org
-  IdentityFile ~/.ssh/aur
   User jim
+  IdentityFile ~/.ssh/aur
