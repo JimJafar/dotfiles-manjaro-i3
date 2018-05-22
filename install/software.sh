@@ -157,7 +157,7 @@ sudo pacman -S --noconfirm ranger
 
 echo "i3lock-color"
 echo "NOTE: When prompted to remove i3lock, hit 'y'"
-yaourt -S i3lock-color
+yaourt -S i3lock-color-git
 
 echo "redshift"
 sudo pacman -S --noconfirm redshift
