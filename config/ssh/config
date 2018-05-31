@@ -1,9 +1,9 @@
+AddKeysToAgent yes
+
 Host github.com
-  User JimSangwine
   IdentityFile ~/.ssh/id_rsa
 
-Host bitbucket.com
-  User jim@sangwine.net
+Host bitbucket.org
   IdentityFile ~/.ssh/id_rsa
 
 Host aur.archlinux.org
