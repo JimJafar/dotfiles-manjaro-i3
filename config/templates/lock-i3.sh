@@ -37,7 +37,8 @@ trap revert HUP INT TERM
 xset +dpms dpms 10 20 30
 
 # lock the screen
-i3lock --nofork --image="$tmpbg" --insidevercolor="$verifyingbgcolor" --insidewrongcolor="$wrongbgcolor" --insidecolor="$bgcolor" --ringvercolor="$verifyingringcolor" --ringwrongcolor="$wrongcolor" --ringcolor="$ringcolor" --keyhlcolor="$highlightcolor" --bshlcolor="$backspacecolor" --textcolor="$textcolor"
+i3lock --nofork --image="$tmpbg" --insidevercolor="$verifyingbgcolor" --insidewrongcolor="$wrongbgcolor" --insidecolor="$bgcolor" --ringvercolor="$verifyingringcolor" --ringwrongcolor="$wrongcolor" 
+--ringcolor="$ringcolor" --keyhlcolor="$highlightcolor" --bshlcolor="$backspacecolor" --verifcolor="$textcolor" --wrongcolor="$wrongcolor"
 # switch off DPMS
 revert
 
