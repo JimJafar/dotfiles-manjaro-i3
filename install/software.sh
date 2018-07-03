@@ -182,7 +182,7 @@ yaourt -S --noconfirm pop-gtk-theme
 yaourt -S --noconfirm gtk-theme-flat-color-git
 
 echo "tzupdate"
-pip install tzupdate
+yaourt -S --noconfirm tzupdate
 
 echo "removing palemoon"
 sudo pacman -Rs --noconfirm palemoon-bin

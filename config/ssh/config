@@ -1,10 +1,14 @@
 AddKeysToAgent yes
 
 Host github.com
-  IdentityFile ~/.ssh/id_rsa
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/git
 
 Host bitbucket.org
-  IdentityFile ~/.ssh/id_rsa
+  HostName bitbucket.org
+  User git
+  IdentityFile ~/.ssh/git
 
 Host aur.archlinux.org
   User jim

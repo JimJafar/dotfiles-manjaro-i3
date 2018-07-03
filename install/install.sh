@@ -222,6 +222,13 @@ if [ -f ~/.xprofile ]; then
 fi
 ln -fs ~/dotfiles-manjaro-i3/config/.xprofile ~/.xprofile
 
+echo ".xinitrc"
+
+if [ -f ~/.xinitrc ]; then
+  mv ~/.xinitrc ~/.xinitrc.pre-dotfiles-bak
+fi
+ln -fs ~/dotfiles-manjaro-i3/config/.xinitrc ~/.xinitrc
+
 echo "X settings"
 
 if [ -f ~/.Xresources ]; then

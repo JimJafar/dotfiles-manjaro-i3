@@ -55,7 +55,7 @@ font-1 = FontAwesome:style=Regular:pixelsize=12
 
 modules-left = i3
 ;modules-center = mpd
-modules-right = pulseaudio filesystem memory cpu wlan vpn battery temperature pulseaudio-tail xbacklight date powermenu
+modules-right = filesystem memory cpu wlan vpn battery temperature pulseaudio xbacklight date powermenu
 
 ; Position of the system tray window
 ; If empty or undefined, tray support will be disabled
@@ -381,19 +381,19 @@ format-foreground = ${colors.secondary}
 
 label = %date% %time%
 
-[module/pulseaudio-tail]
-type = custom/script
-exec = ~/dotfiles-manjaro-i3/scripts/polybar-pulseaudio-tail.sh
-tail = true
-click-right = exec pavucontrol &
-click-left = ~/dotfiles-manjaro-i3/scripts/polybar-pulseaudio-tail.sh --mute
-scroll-up = ~/dotfiles-manjaro-i3/scripts/polybar-pulseaudio-tail.sh --down
-scroll-down = ~/dotfiles-manjaro-i3/scripts/polybar-pulseaudio-tail.sh --up
+#[module/pulseaudio-tail]
+#type = custom/script
+#exec = ~/dotfiles-manjaro-i3/scripts/polybar-pulseaudio-tail.sh
+#tail = true
+#click-right = exec pavucontrol &
+#click-left = ~/dotfiles-manjaro-i3/scripts/polybar-pulseaudio-tail.sh --mute
+#scroll-up = ~/dotfiles-manjaro-i3/scripts/polybar-pulseaudio-tail.sh --down
+#scroll-down = ~/dotfiles-manjaro-i3/scripts/polybar-pulseaudio-tail.sh --up
 
-label = %output%
+#label = %output%
 
-format-underline = ${colors.alert}
-format-foreground = ${colors.secondary}
+#format-underline = ${colors.alert}
+#format-foreground = ${colors.secondary}
 
 [module/battery]
 type = internal/battery
