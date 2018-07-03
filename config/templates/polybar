@@ -224,6 +224,9 @@ ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
 
+format-muted-underline = ${colors.alert}
+format-volume-underline = ${colors.alert}
+
 [module/xkeyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
