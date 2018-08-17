@@ -445,6 +445,7 @@ exec_always --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec_always --no-startup-id sudo tzupdate
 exec --no-startup-id "ruby $HOME/dotfiles-manjaro-i3/scripts/i3-floating-titles.rb"
 exec --no-startup-id xautolock -time 3 -locker ~/lock-i3.sh
+exec --no-startup-id '"$HOME/dotfiles-manjaro-i3/scripts/i3-battery-popup.sh" -n -t10s'
 
 # Manjaro stuff
 

@@ -5,6 +5,9 @@ export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
 export GEM_HOME=$HOME/.gem
 
+# add gam to the path
+PATH="$PATH:$HOME/bin/gam"
+
 # Path to your oh-my-zsh installation.
 export ZSH=/home/jim/.oh-my-zsh
 
